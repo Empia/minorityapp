@@ -102,7 +102,6 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    wdm (0.1.0)
 
 PLATFORMS
   ruby
@@ -112,4 +111,3 @@ DEPENDENCIES
   middleman (~> 3.2)
   puma (~> 2.7)
   rake (~> 10.1)
-  wdm (>= 0.1.0)
