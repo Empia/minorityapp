@@ -21,6 +21,7 @@ GEM
     erubis (2.7.0)
     execjs (2.2.1)
     ffi (1.9.3)
+    ffi (1.9.3-x86-mingw32)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -101,11 +102,14 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    wdm (0.1.0)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   middleman (~> 3.2)
   puma (~> 2.7)
   rake (~> 10.1)
+  wdm (>= 0.1.0)
