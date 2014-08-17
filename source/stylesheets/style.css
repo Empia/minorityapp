@@ -1863,7 +1863,10 @@ section * {
 
 
 
+.content-23.v-center, .content-23 .v-center {
 
+    height: 990px;
+}
 
 .subscribe-form input {
   padding: 19px 6px;
@@ -1872,8 +1875,8 @@ section * {
     margin-top: -6px;
 }
 .primary-logo img {
-    height: 65px;
+    height: 63px;
     width: 94px;
-    background-color: #ecf0f1;
+    background-color: rgba(255, 255, 255, 1);
     margin-top: -12px !important;
 }

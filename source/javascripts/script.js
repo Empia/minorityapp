@@ -36,7 +36,7 @@ function fadedEls(el, shift) {
             "width": 1280,
             "height": 720,
             "filename" : "preview",
-            "types" : ["mp4", "ogg", "webm"]
+            "types" : ["mp4", "webm"]
         });
         // Sections height & scrolling
         $(window).resize(function() {
