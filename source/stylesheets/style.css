@@ -1880,3 +1880,31 @@ section * {
     background-color: rgba(255, 255, 255, 1);
     margin-top: -12px !important;
 }
+
+.content-7 .screen-wrapper .screen {
+    position: absolute;
+    left: -20%;
+    margin-left: -151px;
+    overflow: hidden;
+}
+
+.comparable-content {
+  margin-top: -14px;
+padding-top: 76px;
+margin-bottom: -200px;
+}
+.compare-stuff {
+
+
+
+}
+.compare-stuff h4 {
+  color: #c0392b;
+}
+.footer-buy  {
+ margin-bottom: -55px;
+padding-top: 58px;
+background: url('../images/Italy_001.png') no-repeat scroll 0% 0% transparent;
+background-size: cover;
+padding-top: 58px;
+}
