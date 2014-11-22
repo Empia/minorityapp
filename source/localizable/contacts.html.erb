@@ -16,17 +16,17 @@
 <div class="navbar span12">
 <div class="navbar-inner">
 <button type="button" class="btn btn-navbar"></button>
-<a class="brand" href="#">
+<a class="brand" href="/">
   <div class="primary-logo"><img src="images/minority-logo.svg">Minority</div></a>
 <div class="nav-collapse collapse pull-right">
 <ul class="nav">
 <li class="active">
 <li>
-<a href="#"><%= t(:contacts) %></a>
+<a href="/contacts"><%= t(:contacts) %></a>
 </li>
 </ul>
 <form class="navbar-form pull-left">
-<a class="btn bg-nephritis" href="#"><%= t(:subscribe) %></a>
+<a class="btn bg-nephritis" href="#subscribe"><%= t(:subscribe) %></a>
 </form>
 </div>
 </div>
@@ -127,25 +127,17 @@ height: 60px;" id="mce-EMAIL">
     height: 376px;
     width: 374px;
 }
-
-
 .cbp-so-section p {
-font-size: 2em;
-font-weight: 300;
-color: #6C7A89;
-line-height: 33px;
-padding-top: 33px;
+    font-size: 2em;
+    font-weight: 300;
+    color: #6C7A89;
 }
-.cbp-so-section h2 {
-font-family: 'arsenalbold';
-}
-
-
 body {
   background: none repeat scroll 0% 0% #B8E4E7;
 }
       </style>
       <div id="cbp-so-scroller" class="cbp-so-scroller">
+        <a id="features"></a>
         <section class="cbp-so-section">
           <article class="cbp-so-side cbp-so-side-left">
             <h2><%= t(:interface_title) %></h2>
@@ -229,6 +221,7 @@ Lorem
 </section>    -->
 
 <section class="content-7 v-center footer-buy bg-midnight-blue">
+<a id="subscribe"></a>
 <div class="background">
 &nbsp;
 </div>
@@ -386,22 +379,21 @@ height: 60px;" id="mce-EMAIL" type="email">
 <div class="span7">
 <div class="span7">
 <div class="additional-links">
-<a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+<a href="#"><%= t(:terms) %></a>  <a href="#"><%= t(:privacy) %></a>
 </div>
 </div>
 </div>
 <div class="span3">
 <div class="span3">
 <h6><a href="http://empireinc.net">Empire InCloud</a></h6>
-<!--62 West 55th Street, Suite 302
-<br>
-New York, NY, 10230-->
+
 </div>
 </div>
 </div>
 </div>
 </footer>
-<!-- Placed at the end of the document so the pages load faster -->
+
+
 
 </body>
 </html>
@@ -428,100 +420,3 @@ New York, NY, 10230-->
 
 
 
-
-
-
-
-
-<!-- content-7  
-<section class="content-7 v-center">
-<div>
-<div class="container">
-<h3>Take a look in our awesome product</h3>
-<div class="row v-center">
-<div class="span3">
-<div class="span3">
-Lorem
-</div>
-</div>
-<div class="span4">
-<div class="span4 offset1">
-<div class="screen-wrapper">
-<div class="screen">
-<img src="images/screen-popup.png" alt="" pagespeed_url_hash="2890169536">
-<img src="images/screen.png" alt="" pagespeed_url_hash="769980613">
-</div>
-</div>
-</div>
-</div>
-<div class="span3">
-<div class="span3 offset1">
-<h6>Responsive Layout</h6>
-Of course we haven’t forgotten about the responsive layout. Full mobile support.
-<h6>Retina Ready</h6>
-Startup Framework works fine on devices supporting Retina Display. Feel the clarity!
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- content-23  -->
-<!-- 
-<section class="content-23 v-center bg-midnight-blue custom-bg">
-<div>
-<div class="container">
-<div class="hero-unit hero-unit-bordered">
-<h1>Scenic Nature</h1>
-</div>
-</div>
-</div>
-<a class="control-btn fui-arrow-down" href="#"> </a>
-</section>
-<!-- content-8  --><!-- 
-<section class="content-8 v-center">
-<div>
-<div class="container">
-<img src="images/img-1@2x.png" width="397" height="193" alt="" pagespeed_url_hash="2110467996">
-<h3>Multi Useful Components</h3>
-<div class="row">
-<div class="span6 offset3">
-<p>
-Startup Design Framework contains components and complex blocks which can easily be integrated into almost any design.
-</p>
-<a class="btn btn-large btn-clear" href="#">TRY IT NOW</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- content-23  --> 
-
-<!-- content-8  --><!-- 
-<section class="content-8 v-center">
-<div>
-<div class="container">
-<img width="380" height="187" alt="" src="images/ticket-red@2x.png" pagespeed_url_hash="472865907"/>
-<h3>Twenty Five Awesome Samples</h3>
-<div class="row">
-<div class="span6 offset3">
-<p>
-The most important part of the Startup Framework is the samples.
-The samples form a set of 25 usable pages or you can add new blocks from UI Kit.
-</p>
-<a class="btn btn-large btn-clear" href="#">TRY IT NOW</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- content-11  --><!-- 
-<section class="content-11">
-<div class="container">
-<span>You have the design, you have the code</span>
-<a class="btn btn-large btn-danger" href="#">TRY IT NOW</a>
-</div>
-</section>
-
-
--->

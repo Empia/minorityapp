@@ -30,7 +30,7 @@
 }
 /*only fo flat-ui free*/body {
   color: #34495e;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'arsenalregular', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.231;
 }
@@ -716,6 +716,9 @@ section * {
 .header-10 .navbar .brand img:first-child {
   float: left;
   margin: -10px 15px 0 0;
+  height: 57px;
+width: 86px;
+
 }
 .header-10 .navbar .nav > li {
   margin-left: 30px;
@@ -1907,4 +1910,18 @@ padding-top: 58px;
 background: url('../images/Italy_001.png') no-repeat scroll 0% 0% transparent;
 background-size: cover;
 padding-top: 58px;
+}
+
+
+
+.additional-links a {
+margin-right: 11px;
+}
+.hero-unit p {
+line-height: 24px;
+}
+.hero-unit h1 {
+font-family: 'arsenalbold';
+font-size: 53px !important;
+line-height: 57px !important;
 }
