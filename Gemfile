@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 ruby '2.1.3'
 
 gem 'middleman', '~> 3.3.7'
-#gem 'puma',      '~> 2.7'
+gem 'puma',      '~> 2.7'
 gem 'rake',      '~> 10.1'
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
