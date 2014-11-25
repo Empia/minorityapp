@@ -132,3 +132,22 @@
 	}
 }
 
+
+
+.cbp-so-section img {
+    height: 376px;
+    width: 374px;
+}
+.cbp-so-section p {
+    font-size: 2em;
+    font-weight: 300;
+color: rgba(255, 255, 255, 0.5);
+font-size: 1.125rem;
+line-height: 1.6;
+}
+.cbp-so-section h2 {
+color: white;
+font-size: 30px;
+font-size: 1.875rem;
+margin-bottom: 35px;
+}
