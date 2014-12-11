@@ -21,17 +21,18 @@
 <%= javascript_include_tag  "html5shiv" %>
 <![endif]-->
 <%= yield %>
+
+<%= javascript_include_tag  "jquery.parallax.min" %>
+<%= javascript_include_tag  "jquery.scrollTo-1.4.3.1-min" %>
+<%= javascript_include_tag  "jquery.svg" %>
+<%= javascript_include_tag  "jquery.svganim" %>
+<%= javascript_include_tag  "jquery.backgroundvideo.min" %>
 <%= javascript_include_tag  "jquery-1.10.2.min" %>
 <%= javascript_include_tag  "cbpScroller" %>
 <%= javascript_include_tag  "modernizr.custom" %>
 <%= javascript_include_tag  "classie" %>
 <%= javascript_include_tag  "all" %>
 <%= javascript_include_tag  "easing.min" %>
-<%= javascript_include_tag  "jquery.parallax.min" %>
-<%= javascript_include_tag  "jquery.scrollTo-1.4.3.1-min" %>
-<%= javascript_include_tag  "jquery.svg" %>
-<%= javascript_include_tag  "jquery.svganim" %>
-<%= javascript_include_tag  "jquery.backgroundvideo.min" %>
 <%= javascript_include_tag  "page-transitions" %>
 <%= javascript_include_tag  "startup-kit" %>
 <script type="text/javascript" src="http://janpaepke.github.io/ScrollMagic/js/jquery.scrollmagic.js"></script>
@@ -49,5 +50,43 @@
 
 </script>
 <script type="text/javascript" src="http://imulus.github.io/retinajs/assets/retina.js"></script>
+<script>
+            $(document).ready(function($) {
+              // init controller
+              var controller = new ScrollMagic();
+
+              // build tween
+              var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
+
+              // build scene
+              var scene = new ScrollScene({triggerElement: "a#top", duration: 200, triggerHook: "onLeave"})
+                      .setTween(tween)
+                      .addTo(controller);
+
+              // change behaviour of controller to animate scroll instead of jump
+              controller.scrollTo(function (newpos) {
+                TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+              });
+
+              //  bind scroll to anchor links
+              $(document).on("click", "a[href^=#]", function (e) {
+                var id = $(this).attr("href");
+                if ($(id).length > 0) {
+                  e.preventDefault();
+
+                  // trigger scroll
+                  controller.scrollTo(id);
+
+                    // if supported by the browser we can even update the URL.
+                  if (window.history && window.history.pushState) {
+                    history.pushState("", document.title, id);
+                  }
+                }
+              });
+
+              // show indicators (requires debug extension)
+              scene.addIndicators();
+            });
+</script>
 </body>
 </html>
