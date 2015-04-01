@@ -7,7 +7,7 @@ class MyFeature < Middleman::Extension
 
   helpers do
     def minority(url, text)
-      Net::HTTP.get('run.plnkr.co', '/plunks/SHPgFo5HOs5G8uNukhBM/')
+      0 #Net::HTTP.get('run.plnkr.co', '/plunks/SHPgFo5HOs5G8uNukhBM/')
     end
   end
   

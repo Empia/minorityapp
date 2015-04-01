@@ -4,9 +4,15 @@
 }
 
 .cbp-so-section {
-	margin-bottom: 15em;
+  margin-bottom: 5em;
 }
-
+.fs1:before {
+  font-size: 12em;
+  color: white;
+margin-right: 15%;
+  margin-left: 15%;
+  margin-top: -5px;
+}
 /* Clear floats of children */
 .cbp-so-section:before,
 .cbp-so-section:after {
