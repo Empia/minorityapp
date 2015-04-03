@@ -28,6 +28,8 @@
   border-bottom-color: #34495e !important;
   border-top-color: #34495e !important;
 }
+
+.support-unit h2 { color: white;}
 /*only fo flat-ui free*/
 
 body {
@@ -1949,7 +1951,7 @@ line-height: 24px;
 .price-unit h2 {
   margin-bottom: 25px;
   line-height: 1.1em;
-  font-size: 222%;
+  font-size: 177%;
 }
 
 
@@ -2289,4 +2291,37 @@ you can use the generic selector below, but it's slower:
 }
 header.header-10 {
     position: fixed;
+}
+
+
+
+
+
+@media (max-width: 979px) {
+  .fs1 {
+  width: 69%;
+  margin: 0 auto;
+}
+.hero-unit.price-unit {
+  padding: 0;
+  padding-bottom: 21px;
+    padding-top: 11px;
+}
+.content-23.v-center > div, .content-23 .v-center > div {
+    display: block;
+    padding-top: 80px;
+}
+section.content-23.primary-unit.v-center.bg-midnight-blue {
+  margin: 0;
+  padding-left: 0px;
+  height: 100%;
+}
+.price-unit h2 {
+  font-size: 123%;
+}
+.content-23 .hero-unit h1 {
+  padding-top: 25px;
+  font-size: 33px;
+  line-height: 43px;
+}
 }
