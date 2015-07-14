@@ -8,4 +8,133 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
-!function(t){"use strict";function e(){var e=c.clientHeight,i=t.innerHeight;return i>e?i:e}function i(){return t.pageYOffset||c.scrollTop}function o(t){var e=0,i=0;do isNaN(t.offsetTop)||(e+=t.offsetTop),isNaN(t.offsetLeft)||(i+=t.offsetLeft);while(t=t.offsetParent);return{top:e,left:i}}function n(t,n){var s=t.offsetHeight,r=i(),c=r+e(),l=o(t).top,a=l+s,n=n||0;return c>=l+s*n&&a>=r}function s(t,e){for(var i in e)e.hasOwnProperty(i)&&(t[i]=e[i]);return t}function r(t,e){this.el=t,this.options=s(this.defaults,e),this._init()}var c=t.document.documentElement;r.prototype={defaults:{viewportFactor:.2},_init:function(){if(!Modernizr.touch){this.sections=Array.prototype.slice.call(this.el.querySelectorAll(".cbp-so-section")),this.didScroll=!1;var e=this;this.sections.forEach(function(t){n(t)||classie.add(t,"cbp-so-init")});var i=function(){e.didScroll||(e.didScroll=!0,setTimeout(function(){e._scrollPage()},60))},o=function(){function t(){e._scrollPage(),e.resizeTimeout=null}e.resizeTimeout&&clearTimeout(e.resizeTimeout),e.resizeTimeout=setTimeout(t,200)};t.addEventListener("scroll",i,!1),t.addEventListener("resize",o,!1)}},_scrollPage:function(){var t=this;this.sections.forEach(function(e){n(e,t.options.viewportFactor)?classie.add(e,"cbp-so-animate"):(classie.add(e,"cbp-so-init"),classie.remove(e,"cbp-so-animate"))}),this.didScroll=!1}},t.cbpScroller=r}(window);
+
+;( function( window ) {
+	
+	'use strict';
+
+	var docElem = window.document.documentElement;
+
+	function getViewportH() {
+		var client = docElem['clientHeight'],
+			inner = window['innerHeight'];
+		
+		if( client < inner )
+			return inner;
+		else
+			return client;
+	}
+
+	function scrollY() {
+		return window.pageYOffset || docElem.scrollTop;
+	}
+
+	// http://stackoverflow.com/a/5598797/989439
+	function getOffset( el ) {
+		var offsetTop = 0, offsetLeft = 0;
+		do {
+			if ( !isNaN( el.offsetTop ) ) {
+				offsetTop += el.offsetTop;
+			}
+			if ( !isNaN( el.offsetLeft ) ) {
+				offsetLeft += el.offsetLeft;
+			}
+		} while( el = el.offsetParent )
+
+		return {
+			top : offsetTop,
+			left : offsetLeft
+		}
+	}
+
+	function inViewport( el, h ) {
+		var elH = el.offsetHeight,
+			scrolled = scrollY(),
+			viewed = scrolled + getViewportH(),
+			elTop = getOffset(el).top,
+			elBottom = elTop + elH,
+			// if 0, the element is considered in the viewport as soon as it enters.
+			// if 1, the element is considered in the viewport only when it's fully inside
+			// value in percentage (1 >= h >= 0)
+			h = h || 0;
+
+		return (elTop + elH * h) <= viewed && (elBottom) >= scrolled;
+	}
+
+	function extend( a, b ) {
+		for( var key in b ) { 
+			if( b.hasOwnProperty( key ) ) {
+				a[key] = b[key];
+			}
+		}
+		return a;
+	}
+
+	function cbpScroller( el, options ) {	
+		this.el = el;
+		this.options = extend( this.defaults, options );
+		this._init();
+	}
+
+	cbpScroller.prototype = {
+		defaults : {
+			// The viewportFactor defines how much of the appearing item has to be visible in order to trigger the animation
+			// if we'd use a value of 0, this would mean that it would add the animation class as soon as the item is in the viewport. 
+			// If we were to use the value of 1, the animation would only be triggered when we see all of the item in the viewport (100% of it)
+			viewportFactor : 0.2
+		},
+		_init : function() {
+			if( Modernizr.touch ) return;
+			this.sections = Array.prototype.slice.call( this.el.querySelectorAll( '.cbp-so-section' ) );
+			this.didScroll = false;
+
+			var self = this;
+			// the sections already shown...
+			this.sections.forEach( function( el, i ) {
+				if( !inViewport( el ) ) {
+					classie.add( el, 'cbp-so-init' );
+				}
+			} );
+
+			var scrollHandler = function() {
+					if( !self.didScroll ) {
+						self.didScroll = true;
+						setTimeout( function() { self._scrollPage(); }, 60 );
+					}
+				},
+				resizeHandler = function() {
+					function delayed() {
+						self._scrollPage();
+						self.resizeTimeout = null;
+					}
+					if ( self.resizeTimeout ) {
+						clearTimeout( self.resizeTimeout );
+					}
+					self.resizeTimeout = setTimeout( delayed, 200 );
+				};
+
+			window.addEventListener( 'scroll', scrollHandler, false );
+			window.addEventListener( 'resize', resizeHandler, false );
+		},
+		_scrollPage : function() {
+			var self = this;
+
+			this.sections.forEach( function( el, i ) {
+				if( inViewport( el, self.options.viewportFactor ) ) {
+					classie.add( el, 'cbp-so-animate' );
+				}
+				else {
+					// this add class init if it doesn't have it. This will ensure that the items initially in the viewport will also animate on scroll
+					classie.add( el, 'cbp-so-init' );
+					
+					classie.remove( el, 'cbp-so-animate' );
+				}
+			});
+			this.didScroll = false;
+		}
+	}
+
+	// add to global namespace
+	window.cbpScroller = cbpScroller;
+
+} )( window );

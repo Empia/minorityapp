@@ -1,1 +1,391 @@
-var PageTransitions=function(){function e(e){o=$(e),g=o.children(".pt-page"),r=g.length,g.removeClass("pt-page-current").each(function(){var e=$(this);e.data("originalClassList",e.attr("class"))}).eq(0).addClass("pt-page-current"),o.get(0).className=o.get(0).className.replace(/\s*pt-item-\d+\s*/gi," "),o.addClass("pt-item-1"),o.addClass("pt-first"),1==r&&o.addClass("pt-last")}function t(e,t){if(s)return!1;s=!0;var p=g.filter(".pt-page-current");"prev"==t?t=p.index()-1:"number"!=typeof t&&(t=p.index()+1),0>t?t=r-1:t>=r&&(t=0),o.get(0).className=o.get(0).className.replace(/\s?pt-item-\d+\s?/gi," "),o.addClass("pt-item-"+(t+1)),o.removeClass("pt-first pt-last"),0==t&&o.addClass("pt-first"),t==r-1&&o.addClass("pt-last");var i=g.eq(t).addClass("pt-page-current"),d="",b="";switch(e){case 1:d="pt-page-moveToLeft",b="pt-page-moveFromRight";break;case 2:d="pt-page-moveToRight",b="pt-page-moveFromLeft";break;case 3:d="pt-page-moveToTop",b="pt-page-moveFromBottom";break;case 4:d="pt-page-moveToBottom",b="pt-page-moveFromTop";break;case 5:d="pt-page-fade",b="pt-page-moveFromRight pt-page-ontop";break;case 6:d="pt-page-fade",b="pt-page-moveFromLeft pt-page-ontop";break;case 7:d="pt-page-fade",b="pt-page-moveFromBottom pt-page-ontop";break;case 8:d="pt-page-fade",b="pt-page-moveFromTop pt-page-ontop";break;case 9:d="pt-page-moveToLeftFade",b="pt-page-moveFromRightFade";break;case 10:d="pt-page-moveToRightFade",b="pt-page-moveFromLeftFade";break;case 11:d="pt-page-moveToTopFade",b="pt-page-moveFromBottomFade";break;case 12:d="pt-page-moveToBottomFade",b="pt-page-moveFromTopFade";break;case 13:d="pt-page-moveToLeftEasing pt-page-ontop",b="pt-page-moveFromRight";break;case 14:d="pt-page-moveToRightEasing pt-page-ontop",b="pt-page-moveFromLeft";break;case 15:d="pt-page-moveToTopEasing pt-page-ontop",b="pt-page-moveFromBottom";break;case 16:d="pt-page-moveToBottomEasing pt-page-ontop",b="pt-page-moveFromTop";break;case 17:d="pt-page-scaleDown",b="pt-page-moveFromRight pt-page-ontop";break;case 18:d="pt-page-scaleDown",b="pt-page-moveFromLeft pt-page-ontop";break;case 19:d="pt-page-scaleDown",b="pt-page-moveFromBottom pt-page-ontop";break;case 20:d="pt-page-scaleDown",b="pt-page-moveFromTop pt-page-ontop";break;case 21:d="pt-page-scaleDown",b="pt-page-scaleUpDown pt-page-delay300";break;case 22:d="pt-page-scaleDownUp",b="pt-page-scaleUp pt-page-delay300";break;case 23:d="pt-page-moveToLeft pt-page-ontop",b="pt-page-scaleUp";break;case 24:d="pt-page-moveToRight pt-page-ontop",b="pt-page-scaleUp";break;case 25:d="pt-page-moveToTop pt-page-ontop",b="pt-page-scaleUp";break;case 26:d="pt-page-moveToBottom pt-page-ontop",b="pt-page-scaleUp";break;case 27:d="pt-page-scaleDownCenter",b="pt-page-scaleUpCenter pt-page-delay400";break;case 28:d="pt-page-rotateRightSideFirst",b="pt-page-moveFromRight pt-page-delay200 pt-page-ontop";break;case 29:d="pt-page-rotateLeftSideFirst",b="pt-page-moveFromLeft pt-page-delay200 pt-page-ontop";break;case 30:d="pt-page-rotateTopSideFirst",b="pt-page-moveFromTop pt-page-delay200 pt-page-ontop";break;case 31:d="pt-page-rotateBottomSideFirst",b="pt-page-moveFromBottom pt-page-delay200 pt-page-ontop";break;case 32:d="pt-page-flipOutRight",b="pt-page-flipInLeft pt-page-delay500";break;case 33:d="pt-page-flipOutLeft",b="pt-page-flipInRight pt-page-delay500";break;case 34:d="pt-page-flipOutTop",b="pt-page-flipInBottom pt-page-delay500";break;case 35:d="pt-page-flipOutBottom",b="pt-page-flipInTop pt-page-delay500";break;case 36:d="pt-page-rotateFall pt-page-ontop",b="pt-page-scaleUp";break;case 37:d="pt-page-rotateOutNewspaper",b="pt-page-rotateInNewspaper pt-page-delay500";break;case 38:d="pt-page-rotatePushLeft",b="pt-page-moveFromRight";break;case 39:d="pt-page-rotatePushRight",b="pt-page-moveFromLeft";break;case 40:d="pt-page-rotatePushTop",b="pt-page-moveFromBottom";break;case 41:d="pt-page-rotatePushBottom",b="pt-page-moveFromTop";break;case 42:d="pt-page-rotatePushLeft",b="pt-page-rotatePullRight pt-page-delay180";break;case 43:d="pt-page-rotatePushRight",b="pt-page-rotatePullLeft pt-page-delay180";break;case 44:d="pt-page-rotatePushTop",b="pt-page-rotatePullBottom pt-page-delay180";break;case 45:d="pt-page-rotatePushBottom",b="pt-page-rotatePullTop pt-page-delay180";break;case 46:d="pt-page-rotateFoldLeft",b="pt-page-moveFromRightFade";break;case 47:d="pt-page-rotateFoldRight",b="pt-page-moveFromLeftFade";break;case 48:d="pt-page-rotateFoldTop",b="pt-page-moveFromBottomFade";break;case 49:d="pt-page-rotateFoldBottom",b="pt-page-moveFromTopFade";break;case 50:d="pt-page-moveToRightFade",b="pt-page-rotateUnfoldLeft";break;case 51:d="pt-page-moveToLeftFade",b="pt-page-rotateUnfoldRight";break;case 52:d="pt-page-moveToBottomFade",b="pt-page-rotateUnfoldTop";break;case 53:d="pt-page-moveToTopFade",b="pt-page-rotateUnfoldBottom";break;case 54:d="pt-page-rotateRoomLeftOut pt-page-ontop",b="pt-page-rotateRoomLeftIn";break;case 55:d="pt-page-rotateRoomRightOut pt-page-ontop",b="pt-page-rotateRoomRightIn";break;case 56:d="pt-page-rotateRoomTopOut pt-page-ontop",b="pt-page-rotateRoomTopIn";break;case 57:d="pt-page-rotateRoomBottomOut pt-page-ontop",b="pt-page-rotateRoomBottomIn";break;case 58:d="pt-page-rotateCubeLeftOut pt-page-ontop",b="pt-page-rotateCubeLeftIn";break;case 59:d="pt-page-rotateCubeRightOut pt-page-ontop",b="pt-page-rotateCubeRightIn";break;case 60:d="pt-page-rotateCubeTopOut pt-page-ontop",b="pt-page-rotateCubeTopIn";break;case 61:d="pt-page-rotateCubeBottomOut pt-page-ontop",b="pt-page-rotateCubeBottomIn";break;case 62:d="pt-page-rotateCarouselLeftOut pt-page-ontop",b="pt-page-rotateCarouselLeftIn";break;case 63:d="pt-page-rotateCarouselRightOut pt-page-ontop",b="pt-page-rotateCarouselRightIn";break;case 64:d="pt-page-rotateCarouselTopOut pt-page-ontop",b="pt-page-rotateCarouselTopIn";break;case 65:d="pt-page-rotateCarouselBottomOut pt-page-ontop",b="pt-page-rotateCarouselBottomIn";break;case 66:d="pt-page-rotateSidesOut",b="pt-page-rotateSidesIn pt-page-delay200";break;case 67:d="pt-page-rotateSlideOut",b="pt-page-rotateSlideIn";break;case 68:d="pt-page-fade-out",b="pt-page-fade-in pt-page-delay400";break;default:d="pt-page-moveToLeft",b="pt-page-moveFromRight"}p.addClass(d).on(c,function(){p.off(c),m=!0,n&&a(p,i)}),i.addClass(b).on(c,function(){i.off(c),n=!0,m&&a(p,i)}),l||a(p,i)}function a(e,t){m=!1,n=!1,p(e,t),s=!1}function p(e,t){e.attr("class",e.data("originalClassList")),t.attr("class",t.data("originalClassList")+" pt-page-current")}var o,g,r,s=!1,m=!1,n=!1,i={WebkitAnimation:"webkitAnimationEnd",MozAnimation:"animationend",OAnimation:"oAnimationEnd",msAnimation:"MSAnimationEnd",animation:"animationend"},c=i[Modernizr.prefixed("animation")],l=Modernizr.cssanimations;return{init:e,gotoPage:t}};
+
+var PageTransitions = function() {
+
+  var $main, $pages, pagesCount,
+    isAnimating = false,
+    endCurrPage = false,
+    endNextPage = false,
+    animEndEventNames = {
+      'WebkitAnimation': 'webkitAnimationEnd',
+      'MozAnimation': 'animationend', // mozAnimationEnd
+      'OAnimation': 'oAnimationEnd',
+      'msAnimation': 'MSAnimationEnd',
+      'animation': 'animationend'
+    },
+    // animation end event name
+    animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
+    // support css animations
+    support = Modernizr.cssanimations;
+
+  function init(main) {
+    $main = $(main);
+    $pages = $main.children('.pt-page');
+    pagesCount = $pages.length;
+
+    $pages.removeClass('pt-page-current').each(function() {
+      var $page = $(this);
+      $page.data('originalClassList', $page.attr('class'));
+    }).eq(0).addClass('pt-page-current');
+
+    $main.get(0).className = $main.get(0).className.replace(/\s*pt-item-\d+\s*/ig, ' ');
+    $main.addClass('pt-item-1');
+    $main.addClass('pt-first');
+    if (pagesCount == 1) {
+      $main.addClass('pt-last');
+    }
+  }
+
+  function gotoPage(animation, page) {
+    if (isAnimating) {
+      return false;
+    }
+
+    isAnimating = true;
+
+    var $currPage = $pages.filter('.pt-page-current');
+
+    if (page == 'prev') {
+      page = $currPage.index() - 1;
+    } else if (typeof(page) != 'number') {
+      page = $currPage.index() + 1;
+    }
+
+    if (page < 0) {
+      page = pagesCount - 1;
+    } else if (page >= pagesCount) {
+      page = 0;
+    }
+
+    $main.get(0).className = $main.get(0).className.replace(/\s?pt-item-\d+\s?/ig, ' ');
+    $main.addClass('pt-item-'+(page+1));
+
+    $main.removeClass('pt-first pt-last');
+    if (page == 0) {
+      $main.addClass('pt-first');
+    }
+    if (page == (pagesCount - 1)) {
+      $main.addClass('pt-last');
+    }
+
+    var $nextPage = $pages.eq(page).addClass('pt-page-current'),
+      outClass = '',
+      inClass = '';
+
+    switch (animation) {
+    case 1:
+      outClass = 'pt-page-moveToLeft';
+      inClass = 'pt-page-moveFromRight';
+      break;
+    case 2:
+      outClass = 'pt-page-moveToRight';
+      inClass = 'pt-page-moveFromLeft';
+      break;
+    case 3:
+      outClass = 'pt-page-moveToTop';
+      inClass = 'pt-page-moveFromBottom';
+      break;
+    case 4:
+      outClass = 'pt-page-moveToBottom';
+      inClass = 'pt-page-moveFromTop';
+      break;
+    case 5:
+      outClass = 'pt-page-fade';
+      inClass = 'pt-page-moveFromRight pt-page-ontop';
+      break;
+    case 6:
+      outClass = 'pt-page-fade';
+      inClass = 'pt-page-moveFromLeft pt-page-ontop';
+      break;
+    case 7:
+      outClass = 'pt-page-fade';
+      inClass = 'pt-page-moveFromBottom pt-page-ontop';
+      break;
+    case 8:
+      outClass = 'pt-page-fade';
+      inClass = 'pt-page-moveFromTop pt-page-ontop';
+      break;
+    case 9:
+      outClass = 'pt-page-moveToLeftFade';
+      inClass = 'pt-page-moveFromRightFade';
+      break;
+    case 10:
+      outClass = 'pt-page-moveToRightFade';
+      inClass = 'pt-page-moveFromLeftFade';
+      break;
+    case 11:
+      outClass = 'pt-page-moveToTopFade';
+      inClass = 'pt-page-moveFromBottomFade';
+      break;
+    case 12:
+      outClass = 'pt-page-moveToBottomFade';
+      inClass = 'pt-page-moveFromTopFade';
+      break;
+    case 13:
+      outClass = 'pt-page-moveToLeftEasing pt-page-ontop';
+      inClass = 'pt-page-moveFromRight';
+      break;
+    case 14:
+      outClass = 'pt-page-moveToRightEasing pt-page-ontop';
+      inClass = 'pt-page-moveFromLeft';
+      break;
+    case 15:
+      outClass = 'pt-page-moveToTopEasing pt-page-ontop';
+      inClass = 'pt-page-moveFromBottom';
+      break;
+    case 16:
+      outClass = 'pt-page-moveToBottomEasing pt-page-ontop';
+      inClass = 'pt-page-moveFromTop';
+      break;
+    case 17:
+      outClass = 'pt-page-scaleDown';
+      inClass = 'pt-page-moveFromRight pt-page-ontop';
+      break;
+    case 18:
+      outClass = 'pt-page-scaleDown';
+      inClass = 'pt-page-moveFromLeft pt-page-ontop';
+      break;
+    case 19:
+      outClass = 'pt-page-scaleDown';
+      inClass = 'pt-page-moveFromBottom pt-page-ontop';
+      break;
+    case 20:
+      outClass = 'pt-page-scaleDown';
+      inClass = 'pt-page-moveFromTop pt-page-ontop';
+      break;
+    case 21:
+      outClass = 'pt-page-scaleDown';
+      inClass = 'pt-page-scaleUpDown pt-page-delay300';
+      break;
+    case 22:
+      outClass = 'pt-page-scaleDownUp';
+      inClass = 'pt-page-scaleUp pt-page-delay300';
+      break;
+    case 23:
+      outClass = 'pt-page-moveToLeft pt-page-ontop';
+      inClass = 'pt-page-scaleUp';
+      break;
+    case 24:
+      outClass = 'pt-page-moveToRight pt-page-ontop';
+      inClass = 'pt-page-scaleUp';
+      break;
+    case 25:
+      outClass = 'pt-page-moveToTop pt-page-ontop';
+      inClass = 'pt-page-scaleUp';
+      break;
+    case 26:
+      outClass = 'pt-page-moveToBottom pt-page-ontop';
+      inClass = 'pt-page-scaleUp';
+      break;
+    case 27:
+      outClass = 'pt-page-scaleDownCenter';
+      inClass = 'pt-page-scaleUpCenter pt-page-delay400';
+      break;
+    case 28:
+      outClass = 'pt-page-rotateRightSideFirst';
+      inClass = 'pt-page-moveFromRight pt-page-delay200 pt-page-ontop';
+      break;
+    case 29:
+      outClass = 'pt-page-rotateLeftSideFirst';
+      inClass = 'pt-page-moveFromLeft pt-page-delay200 pt-page-ontop';
+      break;
+    case 30:
+      outClass = 'pt-page-rotateTopSideFirst';
+      inClass = 'pt-page-moveFromTop pt-page-delay200 pt-page-ontop';
+      break;
+    case 31:
+      outClass = 'pt-page-rotateBottomSideFirst';
+      inClass = 'pt-page-moveFromBottom pt-page-delay200 pt-page-ontop';
+      break;
+    case 32:
+      outClass = 'pt-page-flipOutRight';
+      inClass = 'pt-page-flipInLeft pt-page-delay500';
+      break;
+    case 33:
+      outClass = 'pt-page-flipOutLeft';
+      inClass = 'pt-page-flipInRight pt-page-delay500';
+      break;
+    case 34:
+      outClass = 'pt-page-flipOutTop';
+      inClass = 'pt-page-flipInBottom pt-page-delay500';
+      break;
+    case 35:
+      outClass = 'pt-page-flipOutBottom';
+      inClass = 'pt-page-flipInTop pt-page-delay500';
+      break;
+    case 36:
+      outClass = 'pt-page-rotateFall pt-page-ontop';
+      inClass = 'pt-page-scaleUp';
+      break;
+    case 37:
+      outClass = 'pt-page-rotateOutNewspaper';
+      inClass = 'pt-page-rotateInNewspaper pt-page-delay500';
+      break;
+    case 38:
+      outClass = 'pt-page-rotatePushLeft';
+      inClass = 'pt-page-moveFromRight';
+      break;
+    case 39:
+      outClass = 'pt-page-rotatePushRight';
+      inClass = 'pt-page-moveFromLeft';
+      break;
+    case 40:
+      outClass = 'pt-page-rotatePushTop';
+      inClass = 'pt-page-moveFromBottom';
+      break;
+    case 41:
+      outClass = 'pt-page-rotatePushBottom';
+      inClass = 'pt-page-moveFromTop';
+      break;
+    case 42:
+      outClass = 'pt-page-rotatePushLeft';
+      inClass = 'pt-page-rotatePullRight pt-page-delay180';
+      break;
+    case 43:
+      outClass = 'pt-page-rotatePushRight';
+      inClass = 'pt-page-rotatePullLeft pt-page-delay180';
+      break;
+    case 44:
+      outClass = 'pt-page-rotatePushTop';
+      inClass = 'pt-page-rotatePullBottom pt-page-delay180';
+      break;
+    case 45:
+      outClass = 'pt-page-rotatePushBottom';
+      inClass = 'pt-page-rotatePullTop pt-page-delay180';
+      break;
+    case 46:
+      outClass = 'pt-page-rotateFoldLeft';
+      inClass = 'pt-page-moveFromRightFade';
+      break;
+    case 47:
+      outClass = 'pt-page-rotateFoldRight';
+      inClass = 'pt-page-moveFromLeftFade';
+      break;
+    case 48:
+      outClass = 'pt-page-rotateFoldTop';
+      inClass = 'pt-page-moveFromBottomFade';
+      break;
+    case 49:
+      outClass = 'pt-page-rotateFoldBottom';
+      inClass = 'pt-page-moveFromTopFade';
+      break;
+    case 50:
+      outClass = 'pt-page-moveToRightFade';
+      inClass = 'pt-page-rotateUnfoldLeft';
+      break;
+    case 51:
+      outClass = 'pt-page-moveToLeftFade';
+      inClass = 'pt-page-rotateUnfoldRight';
+      break;
+    case 52:
+      outClass = 'pt-page-moveToBottomFade';
+      inClass = 'pt-page-rotateUnfoldTop';
+      break;
+    case 53:
+      outClass = 'pt-page-moveToTopFade';
+      inClass = 'pt-page-rotateUnfoldBottom';
+      break;
+    case 54:
+      outClass = 'pt-page-rotateRoomLeftOut pt-page-ontop';
+      inClass = 'pt-page-rotateRoomLeftIn';
+      break;
+    case 55:
+      outClass = 'pt-page-rotateRoomRightOut pt-page-ontop';
+      inClass = 'pt-page-rotateRoomRightIn';
+      break;
+    case 56:
+      outClass = 'pt-page-rotateRoomTopOut pt-page-ontop';
+      inClass = 'pt-page-rotateRoomTopIn';
+      break;
+    case 57:
+      outClass = 'pt-page-rotateRoomBottomOut pt-page-ontop';
+      inClass = 'pt-page-rotateRoomBottomIn';
+      break;
+    case 58:
+      outClass = 'pt-page-rotateCubeLeftOut pt-page-ontop';
+      inClass = 'pt-page-rotateCubeLeftIn';
+      break;
+    case 59:
+      outClass = 'pt-page-rotateCubeRightOut pt-page-ontop';
+      inClass = 'pt-page-rotateCubeRightIn';
+      break;
+    case 60:
+      outClass = 'pt-page-rotateCubeTopOut pt-page-ontop';
+      inClass = 'pt-page-rotateCubeTopIn';
+      break;
+    case 61:
+      outClass = 'pt-page-rotateCubeBottomOut pt-page-ontop';
+      inClass = 'pt-page-rotateCubeBottomIn';
+      break;
+    case 62:
+      outClass = 'pt-page-rotateCarouselLeftOut pt-page-ontop';
+      inClass = 'pt-page-rotateCarouselLeftIn';
+      break;
+    case 63:
+      outClass = 'pt-page-rotateCarouselRightOut pt-page-ontop';
+      inClass = 'pt-page-rotateCarouselRightIn';
+      break;
+    case 64:
+      outClass = 'pt-page-rotateCarouselTopOut pt-page-ontop';
+      inClass = 'pt-page-rotateCarouselTopIn';
+      break;
+    case 65:
+      outClass = 'pt-page-rotateCarouselBottomOut pt-page-ontop';
+      inClass = 'pt-page-rotateCarouselBottomIn';
+      break;
+    case 66:
+      outClass = 'pt-page-rotateSidesOut';
+      inClass = 'pt-page-rotateSidesIn pt-page-delay200';
+      break;
+    case 67:
+      outClass = 'pt-page-rotateSlideOut';
+      inClass = 'pt-page-rotateSlideIn';
+      break;
+    case 68:
+        outClass = 'pt-page-fade-out';
+        inClass = 'pt-page-fade-in pt-page-delay400';
+        break;
+    default:
+      outClass = 'pt-page-moveToLeft';
+      inClass = 'pt-page-moveFromRight';
+      break;
+    }
+
+    $currPage.addClass(outClass).on(animEndEventName, function() {
+      $currPage.off(animEndEventName);
+      endCurrPage = true;
+      if (endNextPage) {
+        onEndAnimation($currPage, $nextPage);
+      }
+    });
+
+    $nextPage.addClass(inClass).on(animEndEventName, function() {
+      $nextPage.off(animEndEventName);
+      endNextPage = true;
+      if (endCurrPage) {
+        onEndAnimation($currPage, $nextPage);
+      }
+    });
+
+    if (!support) {
+      onEndAnimation($currPage, $nextPage);
+    }
+  }
+
+  function onEndAnimation($outpage, $inpage) {
+    endCurrPage = false;
+    endNextPage = false;
+    resetPage($outpage, $inpage);
+    isAnimating = false;
+  }
+
+  function resetPage($outpage, $inpage) {
+    $outpage.attr('class', $outpage.data('originalClassList'));
+    $inpage.attr('class', $inpage.data('originalClassList') + ' pt-page-current');
+  }
+
+  return {
+    init: init,
+    gotoPage: gotoPage
+  };
+
+};
