@@ -44,6 +44,48 @@
 <link href="/stylesheets/component.css" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
 <link href="/stylesheets/icon-font.css" rel="stylesheet" type="text/css" />
+<style>
+
+.navbar-inner .social-btns.pull-left {
+  margin-top: 27px;
+  margin-right: -25px;
+  margin-left: 46px;
+}
+
+.social-btns {
+  white-space: nowrap;
+}
+.social-btns > * {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #979c9f;
+  width: 20px;
+  height: 25px;
+  overflow: hidden;
+  text-align: center;
+}
+.social-btns > *:first-child {
+  margin-left: 0;
+}
+.social-btns > * > * {
+  display: block;
+  top: 0;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: 0.25s top;
+  -moz-transition: 0.25s top;
+  -o-transition: 0.25s top;
+  transition: 0.25s top;
+}
+.social-btns > * > *:first-child {
+  color: #bdc3c7;
+}
+.social-btns > *:hover > * {
+  top: -100%;
+}</style>
 <link rel="shortcut icon" href="/favicon.ico">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9]>
