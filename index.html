@@ -354,6 +354,31 @@ height: 60px;" id="mce-EMAIL">
           <h2>Create the process, assign your teammates and launch. Show progress to your customers.</h2>
           <hr class="green">
         </div>
+        <iframe width="50%" height="320px" id="minority-demo" src="https://www.youtube.com/embed/SsMt7PMPoQc?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+<script>
+ var player;
+function onYouTubeIframeAPIReady() {
+  console.log('youtube ready');
+  player = new YT.Player('minority-demo');
+}
+function playVideo() {
+  if(player) {
+    player.playVideo();
+  }
+}
+function rewindTo(second) {
+  if(player) {
+    player.seekTo(second);
+  }
+}
+playVideo();
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
+
+</script>
+
         <div class="columns">
           <div class="col-3">
                                       <div class="bucket" style="height: 249px;">
@@ -379,31 +404,7 @@ height: 60px;" id="mce-EMAIL">
 }
           
 </style>
-          <div class="col-3">
-<iframe width="100%" height="100%" id="minority-demo" src="https://www.youtube.com/embed/SsMt7PMPoQc?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
-<script>
- var player;
-function onYouTubeIframeAPIReady() {
-  console.log('youtube ready');
-  player = new YT.Player('minority-demo');
-}
-function playVideo() {
-  if(player) {
-    player.playVideo();
-  }
-}
-function rewindTo(second) {
-  if(player) {
-    player.seekTo(second);
-  }
-}
-playVideo();
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
-
-</script>
+          <div class="col-3" style="visibility: hidden;">
           <!-- 
           <video id="video" autoplay="autoplay" muted="muted" preload="auto" loop="loop" style="
     width: 29%;
