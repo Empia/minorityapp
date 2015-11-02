@@ -358,12 +358,12 @@ height: 60px;" id="mce-EMAIL">
           <div class="col-3">
                                       <div class="bucket" style="height: 249px;">
                   <div class="fui-star icon"></div>
-                  <h3>Limitless modeling</h3>
+                  <h3><a href="#" onclick="event.preventDefault();rewindTo(10);"> Limitless modeling</a></h3>
                   <p>There is no hard-coded standard for modeling. Only your imagination.</p>
                 </div>
                   <div class="bucket" style="height: 249px;">
                   <div class="fui-loop icon"></div>
-                  <h3>Stateful elements</h3>
+                  <h3><a href="#" onclick="event.preventDefault();rewindTo(20);"> Stateful elements</a></h3>
                   <p>Each elements have their own state. It's clean and simple way of execution.</p>
                 </div>
                                         
@@ -380,6 +380,30 @@ height: 60px;" id="mce-EMAIL">
           
 </style>
           <div class="col-3">
+<iframe width="100%" height="100%" id="minority-demo" src="https://www.youtube.com/embed/SsMt7PMPoQc?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+<script>
+ var player;
+function onYouTubeIframeAPIReady() {
+  console.log('youtube ready');
+  player = new YT.Player('minority-demo');
+}
+function playVideo() {
+  if(player) {
+    player.playVideo();
+  }
+}
+function rewindTo(second) {
+  if(player) {
+    player.seekTo(second);
+  }
+}
+playVideo();
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
+
+</script>
           <!-- 
           <video id="video" autoplay="autoplay" muted="muted" preload="auto" loop="loop" style="
     width: 29%;
