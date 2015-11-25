@@ -211,40 +211,206 @@
 </header>
 
 <style>
-.contant-page a {
-    font-size: 38px;
+.pricing-section {
+    padding: 2em 0 8em;
+    min-height: 100vh;
+    position: relative;
+}
+.codrops-header, .pricing-section {
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.pricing-section {
+    padding: 2em 0 8em;
+    min-height: 100vh;
+    position: relative;
+}
+.pricing-section__title {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 5em 0 2em;
+    flex: none;
+    color: white;
+}
+.pricing-section a {
+    color: #333;
 }
 
-.contant-page p {
-    padding-bottom: 54px;
+.pricing-section a:hover, 
+.pricing-section a:focus {
+    color: #000;
 }
+.pricing {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 3em;
+}
+
+
+.pricing__action:focus {
+    outline: none;
+}
+
+/* Individual styles */
+
+/* Sonam */
+.pricing--sonam .pricing__item {
+    margin: 1em;
+    padding: 2em;
+    cursor: default;
+    border-radius: 10px;
+    background: #1F1F1F;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05), 0 15px 30px -10px rgba(0,0,0,0.3);
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.pricing--sonam .pricing__item:hover {
+    background: #141315;
+}
+
+.pricing--sonam .pricing__title {
+    font-size: 2em;
+    width: 100%;
+    margin: 0 0 0.25em;
+    padding: 0 0 0.5em;
+    border-bottom: 3px solid rgb(27, 26, 28);
+    color: white;
+    text-align: center;
+}
+
+.pricing--sonam .pricing__price {
+    color: #E06060;
+    font-size: 1.75em;
+    padding: 1em 0 0.75em;
+}
+
+.pricing--sonam .pricing__sentence {
+    font-weight: bold;
+}
+
+.pricing--sonam .pricing__feature-list {
+    margin: 0;
+    padding: 1em 1.25em 2em;
+    list-style: none;
+}
+
+.pricing--sonam .pricing__action {
+    font-weight: bold;
+    margin-top: auto;
+    padding: 0.75em 2em;
+    border-radius: 5px;
+    background: #E06060;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.pricing--sonam .pricing__action:hover,
+.pricing--sonam .pricing__action:focus {
+    background: #BD3C3C;
+}
+.pricing--sonam .pricing__action {
+    font-weight: bold;
+    margin-top: auto;
+    padding: 0.75em 2em;
+    border-radius: 5px;
+    background: #E06060;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    margin-top: auto;
+}
+.pricing__action {
+    color: inherit;
+    border: none;
+    background: none;
+}
+.pricing-section__title {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 3em 0 5em;
+    flex: none;
+    color: white;
+}
+
+.bg-1 {
+    /*
+    background: #1B1A1C;
+    */
+    background-size: cover;
+    color: #fff !important;
+}
+
+button.pricing__action {
+    display: none;
+}
+
+li.pricing__feature {
+    margin-bottom: 11px;
+}
+
+
 </style>
-<section class="content-23 contant-page v-center bg-midnight-blue">
+<section class="content-23 price-page v-center bg-midnight-blue">
 <div>
 <div class="container">
-<div class="hero-unit">
-
-<div>
-<div class="container">
-<div class="hero-unit">
-<h1>Sales and partnership questions:</h1>
-<p>
-<a href="mailto:sales@minorityapp.com?body=Sales question">sales@minorityapp.com</a>
-</p>
-<h1>Support:</h1>
-<p>
-<a href="mailto:support@minorityapp.com?body=Sales question">support@minorityapp.com</a>
-
-</p>
-<!--End mc_embed_signup-->
 
 
-</div>
-</div>
-</div>
+<section class="pricing-section bg-1">
+            <h2 class="pricing-section__title">Plans</h2>
+            <div class="pricing pricing--sonam">
+                <!--<div class="pricing__item">
+                    <h3 class="pricing__title">Startup</h3>
+                    <div class="pricing__price"><span class="pricing__currency">$</span>9.90</div>
+                    <p class="pricing__sentence">Small business solution</p>
+                    <ul class="pricing__feature-list">
+                        <li class="pricing__feature">Unlimited calls</li>
+                        <li class="pricing__feature">Free hosting</li>
+                        <li class="pricing__feature">40MB of storage space</li>
+                    </ul>
+                    <button class="pricing__action">Choose plan</button>
+                </div>-->
+                <div class="pricing__item">
+                    <h3 class="pricing__title">Base</h3>
+                    <div class="pricing__price"><span class="pricing__currency">$</span>49,99</div>
+                    <p class="pricing__sentence">Small business solution</p>
+                    <ul class="pricing__feature-list">
+                        <li class="pricing__feature">Up to 5 collaborators</li>
+                        <li class="pricing__feature">100 process launch</li>
+                        <li class="pricing__feature">Base support</li>
+                    </ul>
+                    <button class="pricing__action">Choose plan</button>
+                </div>
+                <div class="pricing__item">
+                    <h3 class="pricing__title">Medium</h3>
+                    <div class="pricing__price"><span class="pricing__currency">$</span>59,90</div>
+                    <p class="pricing__sentence">Medium business solution</p>
+                    <ul class="pricing__feature-list">
+                        <li class="pricing__feature">Up to 15 collaborators</li>
+                        <li class="pricing__feature">300 process launch </li>
+                        <li class="pricing__feature">Premium support</li>
+                    </ul>
+                    <button class="pricing__action">Choose plan</button>
+                </div>
+            </div>
+        </section>
 
 
-</div>
+
+
+
 </div>
 </div>
 </section>
