@@ -1534,13 +1534,20 @@ San Francisco, CA, 10230-->
 $(".price-slider")
     .slider({ 
         min: 5, 
-        max: 100, 
+        max: 95, 
         step: 10,
         change: function(event, ui) { 
            $('.employee-num').text(ui.value);
            // 55 for 5
+           if (ui.value > 94) {
+           var new_price = (ui.value - 5) * 6 + 55; 
+           $('.total-price').text('Contact us');
+           $('.pricing__currency').text('');
+           } else {
            var new_price = (ui.value - 5) * 6 + 55; 
            $('.total-price').text(new_price);
+           $('.pricing__currency').text('$');
+           }
         }  
     })
                     
@@ -1549,7 +1556,7 @@ $(".price-slider")
         step: 1
     });
 
- 
+ $('.ui-slider-label[data-value="95"]').text('>95');
 </script>
 
 </body>
