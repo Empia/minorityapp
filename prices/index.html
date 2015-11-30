@@ -280,7 +280,7 @@
     text-align: center;
 }
 .pricing--sonam .pricing__item:hover {
-    background: #141315;
+   /* background: #141315; */
 }
 
 .pricing--sonam .pricing__title {
@@ -321,7 +321,7 @@
 
 .pricing--sonam .pricing__action:hover,
 .pricing--sonam .pricing__action:focus {
-    background: #BD3C3C;
+    /* background: #BD3C3C;*/
 }
 .pricing--sonam .pricing__action {
     font-weight: bold;
@@ -362,16 +362,17 @@ li.pricing__feature {
     margin-bottom: 11px;
 }
 section.pricing-section .pricing__slot {
-    margin-bottom: 10px;
+margin-bottom: 10px;
     padding: 2em 8em 2em 7em;
     cursor: default;
-    border-radius: 10px;
+    border-radius: 0px;
     background: #1F1F1F;
     box-shadow: none;
     -webkit-transition: background 0.3s;
     transition: background 0.3s;
     text-align: center;
     margin-top: -68px;
+    border-top: 3px solid rgb(27, 26, 28);
     font-size: 15px;
     background: #1F1F1F;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05), 0 15px 30px -10px rgba(0,0,0,0.3);
@@ -381,13 +382,48 @@ section.pricing-section .pricing__slot {
     width: 60%;
 }
 section.pricing-section .pricing__slot:hover {
-    background: #141315;
+    /* background: #141315;*/
 }
 .price-slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all.ui-slider-pips {
     background: #4B5156;
     margin-top: 26px;
 }
+.ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label, .price-slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all.ui-slider-pips:hover {
+    color: #48c9b0 !important;
+}
+.get-started {
+    margin-top: 50px;
+    padding-bottom: 9px;
+    color: white;
+    width: 100%;
+}
 
+.get-started a.btn.bg-nephritis {
+    color: white;
+    margin: 0 auto;
+    display: block;
+    width: 182px;
+}
+section.free-options.bg-1 {
+    display: block;
+    text-align: center;
+    padding-bottom: 129px;
+    background: #262D33;
+    width: 58%;
+    margin: 0 auto;
+    margin-top: -97px;
+    padding-top: 2px;
+    border-radius: 5px;
+}
+
+section.free-options.bg-1 h2.pricing-section__title {
+    margin-bottom: 31px;
+}
+
+section.free-options.bg-1 .free-option__container {
+    text-align: center;
+    line-height: 26px;
+}
 </style>
 <section class="content-23 price-page v-center bg-midnight-blue">
 <div>
@@ -432,11 +468,22 @@ section.pricing-section .pricing__slot:hover {
                 </div>
             </div>
             <div class="pricing__slot">$6 per additional employee.
-<div class="price-slider"></div>
-                    
+                <div class="price-slider"></div>                    
             </div>
+            <div class="get-started" style="display: none;">
+                <a class="btn bg-nephritis" href="https://minorityapp.com/#subscribtionbox">Start for FREE</a>
+            </div>            
         </section>
 
+<section class="free-options bg-1">
+            <h2 class="pricing-section__title">Free plan</h2>
+<div class="free-option__container"><div class="free-option__title">You can use Minority for free forever!</div><div class="free-option__limit">You may create 3 process without collaborators and start making models right now!</div><div class="get-started">
+                <a class="btn bg-nephritis" href="https://minorityapp.com/#subscribtionbox">Start for FREE</a>
+            </div></div>
+            
+            
+                        
+        </section>
 
 
 
