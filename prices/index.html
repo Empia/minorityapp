@@ -124,7 +124,7 @@
 
 <!--<a href="/ru">Русский</a>-->
 <li>
-<a href="/prices">Plans</a>
+<a href="/prices">Pricing</a>
 </li>
 <li>
 <a href="/cases">Use cases</a>
@@ -214,11 +214,6 @@
 </header>
 
 <style>
-.pricing-section {
-    padding: 2em 0 8em;
-    min-height: 100vh;
-    position: relative;
-}
 .codrops-header, .pricing-section {
     min-height: 100vh;
     display: -webkit-flex;
@@ -232,7 +227,7 @@
 }
 .pricing-section {
     padding: 2em 0 8em;
-    min-height: 100vh;
+    min-height: 85vh;
     position: relative;
 }
 .pricing-section__title {
@@ -257,9 +252,9 @@
     flex-wrap: wrap;
     -webkit-justify-content: center;
     justify-content: center;
-    width: 100%;
     margin: 0 auto 3em;
-        margin-top: 80px;
+    margin-top: 115px;
+    width: 60%;
 }
 
 
@@ -271,16 +266,16 @@
 
 /* Sonam */
 .pricing--sonam .pricing__item {
-    margin: 1em;
     padding: 2em 0;
-    width: 60%;
+    width: 100%;
     cursor: default;
-    border-radius: 10px;
-    background: #1F1F1F;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05), 0 15px 30px -10px rgba(0,0,0,0.3);
+    border-radius: 0px;
+    background: #2c3e50;
+    border-bottom: solid 3px #202F3E;
     -webkit-transition: background 0.3s;
     transition: background 0.3s;
     text-align: center;
+    border-radius: 9px 9px 0px 0px;
 }
 .pricing--sonam .pricing__item:hover {
    /* background: #141315; */
@@ -291,7 +286,7 @@
     width: 100%;
     margin: 0 0 0.25em;
     padding: 0 0 0.5em;
-    border-bottom: 3px solid rgb(27, 26, 28);
+    border-bottom: 3px solid #202F3E;
     color: white;
     text-align: center;
 }
@@ -365,7 +360,7 @@ li.pricing__feature {
     margin-bottom: 11px;
 }
 section.pricing-section .pricing__slot {
-margin-bottom: 10px;
+    margin-bottom: 10px;
     padding: 2em 8em 2em 7em;
     cursor: default;
     border-radius: 0px;
@@ -375,15 +370,16 @@ margin-bottom: 10px;
     transition: background 0.3s;
     text-align: center;
     margin-top: -68px;
-    border-top: 3px solid rgb(27, 26, 28);
+    border-top: 3px solid #202F3E;
     font-size: 15px;
-    background: #1F1F1F;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05), 0 15px 30px -10px rgba(0,0,0,0.3);
     -webkit-transition: background 0.3s;
     transition: background 0.3s;
     text-align: center;
     width: 60%;
-    border-radius: 8px 0px 8px 0px;
+    border-radius: 0px 0px 8px 8px;
+    background: #2c3e50;
+    margin: -50px auto 3em;
 }
 section.pricing-section .pricing__slot:hover {
     /* background: #141315;*/
@@ -414,23 +410,31 @@ section.free-options.bg-1 {
     padding-bottom: 129px;
     width: 58%;
     margin: 0 auto;
-    margin-top: -97px;
+    margin-top: -137px;
     padding-top: 2px;
     border-radius: 5px;
+    color: black !important;
 }
-
 section.free-options.bg-1 h2.pricing-section__title {
     margin-bottom: 31px;
     font-size: 2em;
     width: 100%;
     margin-top: 21px;
-    color: white;
+    color: black;
     text-align: center;
 }
 
 section.free-options.bg-1 .free-option__container {
     text-align: center;
     line-height: 26px;
+}
+section.content-23.price-page.v-center.bg-midnight-blue {
+    background-color: rgba(52, 73, 94, 0.05);
+}
+.pricing-box {
+    width: 100%;
+    margin: 0 auto;
+    /* display: inline; */
 }
 </style>
 <section class="content-23 price-page v-center bg-midnight-blue">
@@ -440,6 +444,7 @@ section.free-options.bg-1 .free-option__container {
 
 <section class="pricing-section bg-1">
             <!--<h2 class="pricing-section__title">Plans</h2>-->
+            <div class="pricing-box">
             <div class="pricing pricing--sonam">
                 <!--<div class="pricing__item">
                     <h3 class="pricing__title">Startup</h3>
@@ -478,9 +483,11 @@ section.free-options.bg-1 .free-option__container {
             <div class="pricing__slot">$6 per additional employee.
                 <div class="price-slider"></div>                    
             </div>
+                        </div>     
+
             <div class="get-started" style="display: none;">
                 <a class="btn bg-nephritis" href="https://minorityapp.com/#subscribtionbox">Start for FREE</a>
-            </div>            
+            </div>       
         </section>
 
 <section class="free-options bg-1">
