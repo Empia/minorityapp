@@ -3815,7 +3815,7 @@ function fadedEls(el, shift) {
     }
 
     $(window).resize(function() {
-        if (!el.hasClass('ani-processed')) {
+        if (!el.hasClass('ani-processed') && el.offset() !== undefined) {
             el.eq(0).data('scrollPos', el.eq(0).offset().top - $(window).height() + shift);
         }
     }).scroll(function() {
