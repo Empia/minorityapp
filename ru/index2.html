@@ -181,6 +181,11 @@ if ($( "#workflow2 .workflow-results .workflow-result" ).length < 5) {
 
   } );
 
+
+  Velocity(document.getElementsByClassName('task-check')[0], { backgroundColor: "#2ecc71" }, {loop: true, delay: 5000})
+    Velocity(document.getElementsByClassName('task-check')[1], { backgroundColor: "#2ecc71" }, {loop: true, delay: 15000})
+      Velocity(document.getElementsByClassName('task-check')[2], { backgroundColor: "#2ecc71" }, {loop: true, delay: 25000})
+
 /*  
 Velocity(document.getElementsByClassName('task-title')[0], { width: "50%" }, 
  { easing:  [ 0.17, 0.67, 0.83, 0.67 ], loop: true, delay: 6000, begin: function(elements) { 
