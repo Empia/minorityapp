@@ -947,7 +947,7 @@ jQuery('.quantumWizButtonPaperbuttonContent span').click(function() {
   line-height: 1em;
   position: absolute;
   font-size: 0.8em;
-  color: #999;
+  color: white;
   overflow: visible;
   text-align: center;
   top: 20px;
@@ -1257,7 +1257,7 @@ $(".price-slider")
            // 55 for 5
            if (ui.value > 94) {
            var new_price = (ui.value - 5) * 6 + 55; 
-           $('.total-price').text('Contact us');
+           $('.total-price').html('<a href="/contacts">Contact us</a>');
            $('.pricing__currency').text('');
            } else {
            var new_price = (ui.value - 5) * 6 + 55; 

@@ -153,7 +153,6 @@
 .pricing--sonam .pricing__item:hover {
    /* background: #141315; */
 }
-
 .pricing--sonam .pricing__title {
     font-size: 2em;
     width: 100%;
@@ -163,23 +162,19 @@
     color: white;
     text-align: center;
 }
-
 .pricing--sonam .pricing__price {
     color: #079493;
     font-size: 1.75em;
     padding: 1em 0 0.75em;
 }
-
 .pricing--sonam .pricing__sentence {
     font-weight: bold;
 }
-
 .pricing--sonam .pricing__feature-list {
     margin: 0;
     padding: 1em 1.25em 2em;
     list-style: none;
 }
-
 .pricing--sonam .pricing__action {
     font-weight: bold;
     margin-top: auto;
@@ -189,7 +184,6 @@
     -webkit-transition: background 0.3s;
     transition: background 0.3s;
 }
-
 .pricing--sonam .pricing__action:hover,
 .pricing--sonam .pricing__action:focus {
     /* background: #BD3C3C;*/
@@ -216,7 +210,6 @@
     flex: none;
     color: white;
 }
-
 .bg-1 {
     /*
     background: #1B1A1C;
@@ -224,11 +217,9 @@
     background-size: cover;
     color: #fff !important;
 }
-
 button.pricing__action {
     display: none;
 }
-
 li.pricing__feature {
     margin-bottom: 11px;
 }
@@ -270,7 +261,6 @@ section.pricing-section .pricing__slot:hover {
     color: white;
     width: 100%;
 }
-
 .get-started a.btn.bg-nephritis {
     color: white;
     margin: 0 auto;
@@ -296,7 +286,6 @@ section.free-options.bg-1 h2.pricing-section__title {
     color: black;
     text-align: center;
 }
-
 section.free-options.bg-1 .free-option__container {
     text-align: center;
     line-height: 26px;
@@ -1158,7 +1147,7 @@ section.content-23.price-page.v-center.bg-midnight-blue {
   line-height: 1em;
   position: absolute;
   font-size: 0.8em;
-  color: #999;
+  color: white;
   overflow: visible;
   text-align: center;
   top: 20px;
@@ -1468,7 +1457,7 @@ $(".price-slider")
            // 55 for 5
            if (ui.value > 94) {
            var new_price = (ui.value - 5) * 6 + 55; 
-           $('.total-price').text('Contact us');
+           $('.total-price').html('<a href="/contacts">Contact us</a>');
            $('.pricing__currency').text('');
            } else {
            var new_price = (ui.value - 5) * 6 + 55; 
