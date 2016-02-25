@@ -133,23 +133,32 @@ var workFlow2Count = 0;
 var animateIndex = 5;
 var eraseIndex = 4;
 
-var cloneElem = function(el, appendTo) {
+var cloneElem = function(el, appendTo, workflowId) {
           var el = el.clone().hide();
           var elnew = el.appendTo( appendTo );
+          if (workflowId === '1') {
+            var rate = getRandomInt(10,20)+'%'
+          } else {
+            var rate = getRandomInt(10,50)+'%'
+          }
           setTimeout(function() {
               elnew.hide().fadeIn(1000);
+              Velocity($(elnew).find('.workflow-result-rate'), { width: rate },
+                {delay: 2000})
           });
+}
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 var animateWorkflow = function(workflowId) {
-  console.log('workFlow1Count,workFlow2Count', workFlow1Count,workFlow2Count)
   if (workflowId === "1") {
     workFlow1Count = workFlow1Count+1;
     if (workFlow1Count <= animateIndex) {
     if ($( "#workflow1 .workflow-results .workflow-result" ).length < 4) {
 
           cloneElem($( "#workflow1 .workflow-results .workflow-result" ).first(), 
-                    "#workflow1 .workflow-results")
+                    "#workflow1 .workflow-results", '1')
     } else {       
       if ($( "#workflow1 .workflow-results .workflow-result" ).length == eraseIndex) {
         $( "#workflow1 .workflow-results .workflow-result" ).first().remove(); 
@@ -164,7 +173,7 @@ var animateWorkflow = function(workflowId) {
     if ($( "#workflow2 .workflow-results .workflow-result" ).length < 4) {
 
     cloneElem($( "#workflow2 .workflow-results .workflow-result" ).first(), 
-              "#workflow2 .workflow-results")
+              "#workflow2 .workflow-results", '2')
 
     } else {
       if ($( "#workflow2 .workflow-results .workflow-result" ).length == eraseIndex) {
