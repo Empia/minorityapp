@@ -128,35 +128,77 @@ $( document ).ready(function() {
 !function(t){"use strict";var s=function(s,e){this.el=t(s),this.options=t.extend({},t.fn.typed.defaults,e),this.isInput=this.el.is("input"),this.attr=this.options.attr,this.showCursor=this.isInput?!1:this.options.showCursor,this.elContent=this.attr?this.el.attr(this.attr):this.el.text(),this.contentType=this.options.contentType,this.typeSpeed=this.options.typeSpeed,this.startDelay=this.options.startDelay,this.backSpeed=this.options.backSpeed,this.backDelay=this.options.backDelay,this.stringsElement=this.options.stringsElement,this.strings=this.options.strings,this.strPos=0,this.arrayPos=0,this.stopNum=0,this.loop=this.options.loop,this.loopCount=this.options.loopCount,this.curLoop=0,this.stop=!1,this.cursorChar=this.options.cursorChar,this.shuffle=this.options.shuffle,this.sequence=[],this.build()};s.prototype={constructor:s,init:function(){var t=this;t.timeout=setTimeout(function(){for(var s=0;s<t.strings.length;++s)t.sequence[s]=s;t.shuffle&&(t.sequence=t.shuffleArray(t.sequence)),t.typewrite(t.strings[t.sequence[t.arrayPos]],t.strPos)},t.startDelay)},build:function(){var s=this;if(this.showCursor===!0&&(this.cursor=t('<span class="typed-cursor">'+this.cursorChar+"</span>"),this.el.after(this.cursor)),this.stringsElement){s.strings=[],this.stringsElement.hide();var e=this.stringsElement.find("p");t.each(e,function(e,i){s.strings.push(t(i).html())})}this.init()},typewrite:function(t,s){if(this.stop!==!0){var e=Math.round(70*Math.random())+this.typeSpeed,i=this;i.timeout=setTimeout(function(){var e=0,r=t.substr(s);if("^"===r.charAt(0)){var o=1;/^\^\d+/.test(r)&&(r=/\d+/.exec(r)[0],o+=r.length,e=parseInt(r)),t=t.substring(0,s)+t.substring(s+o)}if("html"===i.contentType){var n=t.substr(s).charAt(0);if("<"===n||"&"===n){var a="",h="";for(h="<"===n?">":";";t.substr(s).charAt(0)!==h;)a+=t.substr(s).charAt(0),s++;s++,a+=h}}i.timeout=setTimeout(function(){if(s===t.length){if(i.options.onStringTyped(i.arrayPos),i.arrayPos===i.strings.length-1&&(i.options.callback(),i.curLoop++,i.loop===!1||i.curLoop===i.loopCount))return;i.timeout=setTimeout(function(){i.backspace(t,s)},i.backDelay)}else{0===s&&i.options.preStringTyped(i.arrayPos);var e=t.substr(0,s+1);i.attr?i.el.attr(i.attr,e):i.isInput?i.el.val(e):"html"===i.contentType?i.el.html(e):i.el.text(e),s++,i.typewrite(t,s)}},e)},e)}},backspace:function(t,s){if(this.stop!==!0){var e=Math.round(70*Math.random())+this.backSpeed,i=this;i.timeout=setTimeout(function(){if("html"===i.contentType&&">"===t.substr(s).charAt(0)){for(var e="";"<"!==t.substr(s).charAt(0);)e-=t.substr(s).charAt(0),s--;s--,e+="<"}var r=t.substr(0,s);i.attr?i.el.attr(i.attr,r):i.isInput?i.el.val(r):"html"===i.contentType?i.el.html(r):i.el.text(r),s>i.stopNum?(s--,i.backspace(t,s)):s<=i.stopNum&&(i.arrayPos++,i.arrayPos===i.strings.length?(i.arrayPos=0,i.shuffle&&(i.sequence=i.shuffleArray(i.sequence)),i.init()):i.typewrite(i.strings[i.sequence[i.arrayPos]],s))},e)}},shuffleArray:function(t){var s,e,i=t.length;if(i)for(;--i;)e=Math.floor(Math.random()*(i+1)),s=t[e],t[e]=t[i],t[i]=s;return t},reset:function(){var t=this;clearInterval(t.timeout);var s=this.el.attr("id");this.el.after('<span id="'+s+'"/>'),this.el.remove(),"undefined"!=typeof this.cursor&&this.cursor.remove(),t.options.resetCallback()}},t.fn.typed=function(e){return this.each(function(){var i=t(this),r=i.data("typed"),o="object"==typeof e&&e;r||i.data("typed",r=new s(this,o)),"string"==typeof e&&r[e]()})},t.fn.typed.defaults={strings:["These are the default values...","You know what you should do?","Use your own!","Have a great day!"],stringsElement:null,typeSpeed:0,startDelay:0,backSpeed:0,shuffle:!1,backDelay:500,loop:!1,loopCount:!1,showCursor:!0,cursorChar:"|",attr:null,contentType:"html",callback:function(){},preStringTyped:function(){},onStringTyped:function(){},resetCallback:function(){}}}(window.jQuery);  
 });
 </script> <script>
-$( document ).ready(function() {
+var workFlow1Count = 0;
+var workFlow2Count = 0;
+var animateIndex = 5;
+var eraseIndex = 4;
 
+var cloneElem = function(el, appendTo) {
+          var el = el.clone().hide();
+          var elnew = el.appendTo( appendTo );
+          setTimeout(function() {
+              elnew.hide().fadeIn(1000);
+          });
+}
 
+var animateWorkflow = function(workflowId) {
+  console.log('workFlow1Count,workFlow2Count', workFlow1Count,workFlow2Count)
+  if (workflowId === "1") {
+    workFlow1Count = workFlow1Count+1;
+    if (workFlow1Count <= animateIndex) {
+    if ($( "#workflow1 .workflow-results .workflow-result" ).length < 4) {
+
+          cloneElem($( "#workflow1 .workflow-results .workflow-result" ).first(), 
+                    "#workflow1 .workflow-results")
+    } else {       
+      if ($( "#workflow1 .workflow-results .workflow-result" ).length == eraseIndex) {
+        $( "#workflow1 .workflow-results .workflow-result" ).first().remove(); 
+      };
+    }
+    } else { workFlow1Count = 0; }
+ 
+  }
+  if (workflowId === "2") {
+    workFlow2Count = workFlow2Count+1; 
+    if (workFlow2Count <= animateIndex) {
+    if ($( "#workflow2 .workflow-results .workflow-result" ).length < 4) {
+
+    cloneElem($( "#workflow2 .workflow-results .workflow-result" ).first(), 
+              "#workflow2 .workflow-results")
+
+    } else {
+      if ($( "#workflow2 .workflow-results .workflow-result" ).length == eraseIndex) {
+          $( "#workflow2 .workflow-results .workflow-result" ).first().remove(); 
+      }
+    }
+  } else { workFlow2Count = 0; }
+}
+
+}
+
+var animLoop = function() {
   Velocity(document.getElementsByClassName('workflow-button')[0], { opacity: 0.5 }, { 
-    loop: true, delay: 1000,
-    progress: function(elements, complete, remaining, start, tweenValue) {
-
-if ($( "#workflow1 .workflow-results .workflow-result" ).length < 4) {
-
-      $( "#workflow1 .workflow-results .workflow-result" ).first().clone().appendTo( "#workflow1 .workflow-results" );
-
-} else {       $( "#workflow1 .workflow-results .workflow-result" ).first().remove(); }
-
+    loop: false, //delay: 3000,
+    complete: function(elements) {//progress: function(elements, complete, remaining, start, tweenValue) {
+      animateWorkflow('1');
     }, 
 
-} );
-
-
-Velocity(document.getElementsByClassName('workflow-button')[1], { opacity: 0.5 }, { 
-    loop: true, delay: 2000,
-    progress: function(elements, complete, remaining, start, tweenValue) {
-
-if ($( "#workflow2 .workflow-results .workflow-result" ).length < 4) {
-      $( "#workflow2 .workflow-results .workflow-result" ).first().clone().appendTo( "#workflow2 .workflow-results" );
-} else {  $( "#workflow2 .workflow-results .workflow-result" ).first().remove(); }
-
-}, 
-
   } );
+
+
+  Velocity(document.getElementsByClassName('workflow-button')[1], { opacity: 0.5 }, { 
+    loop: false, //delay: 3000,
+    complete: function(elements) {//progress: function(elements, complete, remaining, start, tweenValue) {
+      animateWorkflow('2');
+    }, 
+  } );
+}
+
+
+$( document ).ready(function() {
+setInterval(function() {
+  animLoop();
+}, 3000);
 
 
   Velocity($( "#task1 .task-check" ) , { backgroundColor: "#2ecc71" }, {loop: true, delay: 5000})
@@ -186,45 +228,6 @@ setTimeout(function() {
  Velocity($( "#task3" ),  { opacity: "1" }, {loop: false, delay: 2000})
 }, 4000);
 
-/*  
-Velocity(document.getElementsByClassName('task-title')[0], { width: "50%" }, 
- { easing:  [ 0.17, 0.67, 0.83, 0.67 ], loop: true, delay: 6000, begin: function(elements) { 
-  console.log(elements)
-  Velocity(document.getElementsByClassName('task-check')[0], { backgroundColor: "#2ecc71" }, {loop: true, delay: 5000})
-
-} });
-*/
-
-/*
-Velocity(document.getElementsByClassName('task-title')[1], { width: "0%" },
- { easing:   [ 250, 15 ], loop: true, delay: 100, begin: function(elements) { 
-  console.log(elements)
-  Velocity(document.getElementsByClassName('task-check')[1], { backgroundColor: "#2ecc71" }, {loop: true, delay: 9000, begin: function(elements) {
-      $( ".task-trackers .task" ).last().remove();
-      $( ".task-trackers .task" ).first().clone().appendTo( ".task-trackers" );
-      $( ".task-trackers .task" ).first().clone().appendTo( ".task-trackers" );
-Velocity(document.getElementsByClassName('task-title')[3], { width: "0%" },{ easing:   [ 250, 15 ], loop: true, delay: 100});
-Velocity(document.getElementsByClassName('task-title')[4], { width: "0%" },{ easing:   [ 250, 15 ], loop: true, delay: 100});
-
-
-  Velocity(document.getElementsByClassName('task-check')[1], { backgroundColor: "#2ecc71" }, {loop: true, delay: 16000, begin: function(elements) {
-      $( ".task-trackers .task" ).last().remove();
-  } });
-
-
-
-  } })
-
-} });
-Velocity(document.getElementsByClassName('task-title')[2], { width: "17%" }, { 
-  easing: "easeInSine", loop: true, delay: 50, begin: function(elements) { 
-  console.log(elements)
-  Velocity(document.getElementsByClassName('task-check')[2], { backgroundColor: "#2ecc71" }, {loop: true, delay: 7000, begin: function(elements) {
-      $( ".task-trackers .task" ).first().clone().appendTo( ".task-trackers" );
-  }});
-
-} });
-*/
 
 });
 
