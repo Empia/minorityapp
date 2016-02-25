@@ -132,31 +132,29 @@ $( document ).ready(function() {
 
 
   Velocity(document.getElementsByClassName('workflow-button')[0], { opacity: 0.5 }, { 
-    loop: true, delay: 4000,
+    loop: true, delay: 1000,
     progress: function(elements, complete, remaining, start, tweenValue) {
 
-if ($( "#workflow1 .workflow-results .workflow-result" ).length < 5) {
+if ($( "#workflow1 .workflow-results .workflow-result" ).length < 4) {
 
       $( "#workflow1 .workflow-results .workflow-result" ).first().clone().appendTo( "#workflow1 .workflow-results" );
-//setTimeout(function() {
-//}, 500);      
-//      $( "#workflow1 .workflow-results .workflow-result" ).first().clone().appendTo( "#workflow1 .workflow-results" );
+
 } else {       $( "#workflow1 .workflow-results .workflow-result" ).first().remove(); }
 
     }, 
 
-  } );
-  Velocity(document.getElementsByClassName('workflow-button')[1], { opacity: 0.5 }, { 
+} );
+
+
+Velocity(document.getElementsByClassName('workflow-button')[1], { opacity: 0.5 }, { 
     loop: true, delay: 2000,
     progress: function(elements, complete, remaining, start, tweenValue) {
 
-if ($( "#workflow2 .workflow-results .workflow-result" ).length < 5) {
+if ($( "#workflow2 .workflow-results .workflow-result" ).length < 4) {
       $( "#workflow2 .workflow-results .workflow-result" ).first().clone().appendTo( "#workflow2 .workflow-results" );
-//setTimeout(function() {
-//}, 500);      
-//      $( "#workflow2 .workflow-results .workflow-result" ).first().clone().appendTo( "#workflow2 .workflow-results" );
-} else {       $( "#workflow2 .workflow-results .workflow-result" ).first().remove(); }
-    }, 
+} else {  $( "#workflow2 .workflow-results .workflow-result" ).first().remove(); }
+
+}, 
 
   } );
 
