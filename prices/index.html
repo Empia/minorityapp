@@ -1768,7 +1768,7 @@ stepSlider.noUiSlider.on('update', function( values, handle ) {
                // 55 for 5
            console.log('values', values);
            console.log('handle', values[handle]);
-           var people_count = Math.floor(values[handle]/200);
+           var people_count = Math.floor(values[handle]/400);
            var selected_price
            if ($('.pricing-box-header input[type="radio"]:checked').val() == "1") {
             selected_price = 9.50;
