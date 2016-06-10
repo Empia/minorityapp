@@ -383,7 +383,7 @@ section.pricing-section .pricing__slot:hover {
 section.free-options.bg-1 {
     display: block;
     text-align: center;
-    padding-bottom: 129px;
+    padding-bottom: 215px;
     width: 58%;
     margin: 0 auto;
     margin-top: -137px;
@@ -483,7 +483,7 @@ section.content-23.price-page.v-center.bg-midnight-blue {
                             <h3 class=pricing__title>One</h3>
                             <div class=pricing__price><span class=pricing__currency>$</span><span class=total-price>55</span>
                             </div>
-                            <p class=pricing__sentence>One for all per month</p>
+                            <p class=pricing__sentence>One for all</p>
                             <ul class=pricing__feature-list>
                                 <li class=pricing__feature><span class=employee-num>5</span> employees included</li>
                                 <li class=pricing__feature>Unlimited process launch </li>
@@ -1771,9 +1771,9 @@ stepSlider.noUiSlider.on('update', function( values, handle ) {
            var people_count = Math.floor(values[handle]/200);
            var selected_price
            if ($('.pricing-box-header input[type="radio"]:checked').val() == "1") {
-            selected_price = 4.50;
-           } else {
             selected_price = 5.50;
+           } else {
+            selected_price = 4.50;
            }
            
            $('#people-count').text(people_count);
