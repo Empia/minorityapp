@@ -264,10 +264,10 @@
 </footer>
 <script>
 
-$(document).scroll(function () {
+var headerBuilder = function() {
     var x = $(this).scrollTop(),
-        home = $('.content-23.content-23-new.primary-unit.v-center.bg-midnight-blue'),
-        about = $('.section.whatis-section.all-in-one.grey-gradient');
+    home = $('.content-23.content-23-new.primary-unit.v-center.bg-midnight-blue'),
+    about = $('.section.whatis-section.all-in-one.grey-gradient');
 
     if (x >= home.offset().top && x < (home.offset().top + home.height())) {
         $('header.header-10').css("background-color", "transparent");
@@ -275,9 +275,15 @@ $(document).scroll(function () {
     if (x >= (home.offset().top+40) && x < (home.offset().top+40 + home.height())-30) {
         $('header.header-10').css("background-color", "#323f4c");
     }
-    if (x >= about.offset().top && x < (about.offset().top + about.height())) {
+    if (x >= about.offset().top && x > (about.offset().top + about.height())) {
         $('header.header-10').css("background-color", "#323f4c");
     }
+}
+$(document).scroll(function () {
+headerBuilder();
+});
+$(document).ready(function() {
+    headerBuilder();
 });
 </script>
 </body>
