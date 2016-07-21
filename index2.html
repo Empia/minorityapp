@@ -387,7 +387,10 @@
 .section-navbar-item:hover:after, .section-navbar .active:after {
     opacity: 1;
 }
-
+.whatis-section li.section-navbar-item img {
+    width: 120px;
+    height: 72px;
+}
 </style>
 
 
@@ -395,13 +398,16 @@
 
 <nav class="section-navbar">
           <ul class="section-navbar-tabs js-organize-tabs">
-            <li class="section-navbar-item active">
+            <li class="section-navbar-item section-navbar-item-modeling active">
+             <img src="/images/noun_444370_cc.svg" alt="">
               <a href="#Modeling" aria-controls="Modeling" role="tab" data-toggle="tab" aria-expanded="true">Modeling</a>
             </li>
-            <li class="section-navbar-item">
-              <a href="#Run" aria-controls="Run" role="tab" data-toggle="tab" aria-expanded="false">Run</a>
+            <li class="section-navbar-item section-navbar-item-launch">
+            <img src="/images/noun_329818_cc.svg" alt="">
+              <a href="#Launch" aria-controls="Launch" role="tab" data-toggle="tab" aria-expanded="false">Launch</a>
             </li>
-            <li class="section-navbar-item">
+            <li class="section-navbar-item section-navbar-item-api">
+            <img src="/images/noun_38239.svg" alt="">
               <a href="#API" aria-controls="API" role="tab" data-toggle="tab" aria-expanded="false">API</a>
             </li>
           </ul>
