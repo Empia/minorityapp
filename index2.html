@@ -315,13 +315,97 @@
     ul.case-list {
         display: none;
     }
+
+
+.section-navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.list-inline, .navbar-nav, .section-hero-brands ul, .section-navbar-tabs {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+}
+.section-navbar-tabs {
+    position: relative;
+    width: auto;
+}
+
+.list-inline, .navbar-nav, .section-hero-brands ul, .section-navbar-tabs {
+    margin-left: 0;
+}
+.list-inline>li, .navbar-nav>li, .section-hero-brands ul>li, .section-navbar-tabs>li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.section-navbar-item {
+    padding-left: 0!important;
+    padding-right: 0!important;
+    text-align: center;
+    position: relative;
+}
+
+.section-navbar-item a {
+    display: block;
+    padding: 18px;
+    font-size: 18px;
+    letter-spacing: .4px;
+    font-family: 'Open Sans';
+    color: #31699b;
+}
+
+.section-navbar-item:after {
+    content: "";
+    height: 6px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border-radius: 30px;
+    background-color: #2c6292;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    z-index: 2;
+}
+.section-navbar-tabs:after {
+    content: "";
+    height: 6px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border-radius: 30px;
+    background-color: #cde6ff;
+    z-index: 1;
+}
+.section-navbar-item:hover:after, .section-navbar .active:after {
+    opacity: 1;
+}
+
 </style>
 
 
 <section class="section whatis-section all-in-one grey-gradient">
-<div class="content">
-<p>The point is that any working activity is compound from actions, the basic units; and so this is a platform for describing those actions and repeat activity. Unlike the project management, where the point in one plan for one run, workflow management is for the world where's already mined enough data to describe a good work process and run through it multiple times. The real work is reiteration of actions for producing value, not the reinventing the wheel. </p>
-</div>
+
+<nav class="section-navbar">
+          <ul class="section-navbar-tabs js-organize-tabs">
+            <li class="section-navbar-item active">
+              <a href="#Modeling" aria-controls="Modeling" role="tab" data-toggle="tab" aria-expanded="true">Modeling</a>
+            </li>
+            <li class="section-navbar-item">
+              <a href="#Run" aria-controls="Run" role="tab" data-toggle="tab" aria-expanded="false">Run</a>
+            </li>
+            <li class="section-navbar-item">
+              <a href="#API" aria-controls="API" role="tab" data-toggle="tab" aria-expanded="false">API</a>
+            </li>
+          </ul>
+        </nav>
 </section>
 
 <section class="section all-in-one grey-gradient">
