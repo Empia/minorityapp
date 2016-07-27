@@ -416,8 +416,10 @@
     color: #fff;
 }
 .feature-header {
-    font-size: 26px;
     font-weight: 100;
+    font-family: 'proxima_nova_rgregular', sans-serif;
+    font-size: 55px;
+    line-height: 1.17;
 }
 .lead {
     font-size: 24px;
@@ -425,12 +427,38 @@
 .lead {
     line-height: 1.5;
 }
+.feature-header-content h2.feature-header.feature-header-main {
+    font-family: 'proxima_nova_rgregular', sans-serif;
+    font-size: 55px;
+    line-height: 1.17;
+}
+.feature-header-content h4.feature-header.feature-header-main {
+    font-family: 'proxima_nova_rgregular', sans-serif;
+    font-size: 53px;
+}
+.feature-header-content h4 {
+    font-family: 'proxima_nova_rgregular', sans-serif;
+    font-size: 28px;
+}
+.feature-block.black-bg .feature-header-content h4 {
+    color: #c6c6c6;
+}
+.feature-block.black-bg .cbp-so-section p {
+    color: #c6c6c6;
 
+}
+.feature-block.black-bg .cbp-so-section h2, .feature-block.black-bg .cbp-so-section .fs1::before {
+        color: white;
+
+}
+.feature-block.gray-bg {
+    background: #fcfeff;
+}
 
 </style>
 
 
-<section class="section whatis-section all-in-one grey-gradient">
+<section class="section whatis-section all-in-one grey-gradient" style="display:none;">
 
 <nav class="section-navbar">
           <ul class="section-navbar-tabs js-organize-tabs">
@@ -451,77 +479,92 @@
 </section>
 
 
-<div class="feature-block black-bg">
-<h2 class="feature-header">
-      Modeling.<br> Anytime. Anywhere.
+<div class="feature-block gray-bg">
+<div class="feature-header-content" style="">
+<h2 class="feature-header feature-header-main">
+      Modeling
 </h2>
-  <div class="container">
+<h4>
+    Create great interactive workflow, integration, and all other kinds of flow oriented processes.
+</h4>
+</div>
+
+
+  <div class="container" style="padding-top: 112px;">
     <div class="row text-center">
-      <div class="col-md-8 col-md-offset-2">
-        <img alt="Account protection" class="downscale-fit" src="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/security.png" data-at2x="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/security@2x.png">
-        <h2 class="feature-header mtl">
-          Describe <br> your workflow
-        </h2>
-        <p class="lead mtm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ducimus reprehenderit quod dolore, nisi voluptatum maiores iure necessitatibus nemo corporis excepturi, sunt hic id voluptatem officiis, a inventore. Obcaecati, nostrum.
-        </p>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-8 col-md-offset-2">
-        <img alt="Account protection" class="downscale-fit" src="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/security.png" data-at2x="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/security@2x.png">
-        <h2 class="feature-header mtl">
-          Use <br> types
-        </h2>
-        <p class="lead mtm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ducimus reprehenderit quod dolore, nisi voluptatum maiores iure necessitatibus nemo corporis excepturi, sunt hic id voluptatem officiis, a inventore. Obcaecati, nostrum.
-        </p>
-      </div>
-    </div>
+        <div id=cbp-so-scroller class="cbp-so-scroller use-cases-section">
+            <style>
+                .fs1.icon-pencil,
+                .fs1.icon-chat {
+                    width: auto;
+                    height: auto;
+                }
+            </style>
+            <section class=cbp-so-section>
+                <figure class="cbp-so-side cbp-so-side-left">
+                    <div class="fs1 icon-pencil" aria-hidden=true></div>
+                </figure>
+                <article class="cbp-so-side cbp-so-side-right">
+                    <h2>Understand Your Workflow Better</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, dolor omnis harum ducimus tempora distinctio velit minima deserunt sapiente doloribus molestiae placeat impedit, nobis, aspernatur, dolorem ea. A asperiores, blanditiis.</p>
+                </article>
+            </section>
+            <section class=cbp-so-section>
+                <figure class="cbp-so-side cbp-so-side-left">
+                    <div class="fs1 icon-chat" aria-hidden=true data-sicon=""></div>
+                </figure>
+                <article class="cbp-so-side cbp-so-side-right">
+                    <h2>Show Clients That You're Worth It</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo maxime quisquam fugit tenetur debitis. Ea reprehenderit delectus quisquam, mollitia omnis alquam dignissimos quas, sit deserunt! Consequatur non, deserunt veniam possimus .</p>
+                </article>
+            </section>
+        </div>
 
   </div>
 </div>
+
+</div>
+
 
 <div class="feature-block text-center">
-  <div class="container">
-    <h2 class="feature-header">
-      Launch.<br> Anytime. Anywhere.
-    </h2>
+<div class="feature-header-content" style="">
+<h2 class="feature-header feature-header-main">
+      Launch
+</h2>
+<h4>
+</h4>
+</div>
 
-    
-    <div class="row mtx mbx">
-      <div class="col-md-10 col-md-offset-1">
-        <img alt="Fast execution" class="downscale-fit" src="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/fast_execution.png" data-at2x="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/fast_execution@2x.png">
-        <h3 class="mini-feature-header lead mtm">
-          Invoke
-        </h3>
-        <div class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo necessitatibus, sequi a eum commodi aperiam suscipit est nostrum excepturi beatae non sint nobis doloremque tempore repellendus expedita veritatis dignissimos, at.
+  <div class="container">
+   
+        <div id=cbp-so-scroller class="cbp-so-scroller use-cases-section">
+            <style>
+                .fs1.icon-pencil,
+                .fs1.icon-chat {
+                    width: auto;
+                    height: auto;
+                }
+            </style>
+            <section class=cbp-so-section>
+                <figure class="cbp-so-side cbp-so-side-left">
+                    <div class="fs1 icon-pencil" aria-hidden=true></div>
+                </figure>
+                <article class="cbp-so-side cbp-so-side-right">
+                    <h2>Understand Your Workflow Better</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis neque illo similique, non numquam ad quis, voluptates voluptatem eligendi nobis repellat suscipit molestiae illum quam aspernatur doloremque beatae minima!</p>
+                </article>
+            </section>
+            <section class=cbp-so-section>
+                <figure class="cbp-so-side cbp-so-side-left">
+                    <div class="fs1 icon-chat" aria-hidden=true data-sicon=""></div>
+                </figure>
+                <article class="cbp-so-side cbp-so-side-right">
+                    <h2>Show Clients That You're Worth It</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis neque illo similique, non numquam ad quis, voluptates voluptatem eligendi nobis repellat suscipit molestiae illum quam aspernatur doloremque beatae minima!</p>
+                </article>
+            </section>
         </div>
-      </div>
-    </div>
-    <div class="row mtx mbx">
-      <div class="col-md-10 col-md-offset-1">
-        <img alt="Fast execution" class="downscale-fit" src="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/fast_execution.png" data-at2x="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/fast_execution@2x.png">
-        <h3 class="mini-feature-header lead mtm">
-          Track
-        </h3>
-        <div class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo necessitatibus, sequi a eum commodi aperiam suscipit est nostrum excepturi beatae non sint nobis doloremque tempore repellendus expedita veritatis dignissimos, at.
-        </div>
-      </div>
-    </div>
-    <div class="row mtx mbx">
-      <div class="col-md-10 col-md-offset-1">
-        <img alt="Fast execution" class="downscale-fit" src="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/fast_execution.png" data-at2x="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/fast_execution@2x.png">
-        <h3 class="mini-feature-header lead mtm">
-          Compare
-        </h3>
-        <div class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo necessitatibus, sequi a eum commodi aperiam suscipit est nostrum excepturi beatae non sint nobis doloremque tempore repellendus expedita veritatis dignissimos, at.
-        </div>
-      </div>
-    </div>    
+
 
   </div>
 </div>
@@ -529,32 +572,44 @@
 
 
 <div class="feature-block black-bg">
-<h2 class="feature-header">
-      Customization.<br> API and pre-defined flows.
+<div class="feature-header-content" style="">
+<h2 class="feature-header feature-header-main">
+      Customization
 </h2>
+<h4>
+API and pre-defined flows
+</h4>
+</div>
+
   <div class="container">
-    <div class="row text-center">
-      <div class="col-md-8 col-md-offset-2">
-        <img alt="Account protection" class="downscale-fit" src="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/security.png" data-at2x="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/security@2x.png">
-        <h2 class="feature-header mtl">
-          Integrate <br> 3-party actions
-        </h2>
-        <p class="lead mtm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ducimus reprehenderit quod dolore, nisi voluptatum maiores iure necessitatibus nemo corporis excepturi, sunt hic id voluptatem officiis, a inventore. Obcaecati, nostrum.
-        </p>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-8 col-md-offset-2">
-        <img alt="Account protection" class="downscale-fit" src="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/security.png" data-at2x="https://d2ue93q3u507c2.cloudfront.net/assets/marketing/images/home/security@2x.png">
-        <h2 class="feature-header mtl">
-          Build your <br> OWN
-        </h2>
-        <p class="lead mtm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ducimus reprehenderit quod dolore, nisi voluptatum maiores iure necessitatibus nemo corporis excepturi, sunt hic id voluptatem officiis, a inventore. Obcaecati, nostrum.
-        </p>
-      </div>
-    </div>
+        <div id=cbp-so-scroller class="cbp-so-scroller use-cases-section">
+            <style>
+                .fs1.icon-pencil,
+                .fs1.icon-chat {
+                    width: auto;
+                    height: auto;
+                }
+            </style>
+            <section class=cbp-so-section>
+                <figure class="cbp-so-side cbp-so-side-left">
+                    <div class="fs1 icon-pencil" aria-hidden=true></div>
+                </figure>
+                <article class="cbp-so-side cbp-so-side-right">
+                    <h2>Understand Your Workflow Better</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis neque illo similique, non numquam ad quis, voluptates voluptatem eligendi nobis repellat suscipit molestiae illum quam aspernatur doloremque beatae minima!</p>
+                </article>
+            </section>
+            <section class=cbp-so-section>
+                <figure class="cbp-so-side cbp-so-side-left">
+                    <div class="fs1 icon-chat" aria-hidden=true data-sicon=""></div>
+                </figure>
+                <article class="cbp-so-side cbp-so-side-right">
+                    <h2>Show Clients That You're Worth It</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis neque illo similique, non numquam ad quis, voluptates voluptatem eligendi nobis repellat suscipit molestiae illum quam aspernatur doloremque beatae minima!</p>
+                </article>
+            </section>
+        </div>
+
 
   </div>
 </div>
@@ -599,7 +654,8 @@
             </div>
         </div>
 </section>
-<section id=features class=features>
+
+<section id=features class="features" style="display: none;">
     <div class=container>
         <header class="clearfix usecases-title"> <a href="/cases">Use cases</a> </header>
         <div id=cbp-so-scroller class="cbp-so-scroller use-cases-section">
