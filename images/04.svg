@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 018d12067503d969c40c5b2c66959a2d5f01dedb
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="211pt" height="268pt" viewBox="0 0 211 268" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -123,6 +126,7 @@
 <path fill="#dbdbdd" opacity="1.00" d=" M 167.31 218.22 C 173.90 218.39 180.75 217.12 187.10 219.44 C 180.01 220.44 172.83 219.97 165.70 219.90 C 166.10 219.48 166.91 218.64 167.31 218.22 Z" />
 </g>
 </svg>
+<<<<<<< HEAD
 =======
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -249,3 +253,5 @@
 </g>
 </svg>
 >>>>>>> 0117c3eb323c5f8b7ea857342561e30fb95f8c4d
+=======
+>>>>>>> 018d12067503d969c40c5b2c66959a2d5f01dedb
