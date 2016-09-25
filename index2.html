@@ -185,7 +185,24 @@
   text-align: center;
 }
 </style> </div> </div> </header> 
+<style media="screen">
+.fs1.icon-create-new-elem {
+  width: 100% !important;
+  display: block !important;
+  background-image: url(http://127.0.0.1:4567/images/createnewelemform.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 290px !important;
+  float: none;
+  overflow: hidden;
+  background-position: 1px 0px;
+  /* top: -130px; */
+  /* left: -79px; */
+  color: transparent;
+}
 
+</style>
 
 <section class="content-23 content-23-new primary-unit v-center bg-midnight-blue">
     <div class="content-container primary-content-container">
@@ -312,11 +329,10 @@
         <div class=compare-motto> Turn chaotic tasks into clear workflow </div>
 </section>
 <style>
-    ul.case-list {
-        display: none;
-    }
 
-
+ul.case-list {
+    display: none;
+}
 .section-navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -512,7 +528,8 @@
     max-width: 1200px;
     background: rgba(255, 255, 255, 0.51);
     padding: 12px 0px;
-    margin: 80px auto;
+    margin: 72px auto;
+    margin-bottom: -35px;
     border-radius: 5px;
 }
 .process-elements-mock-modeling .element {
@@ -520,10 +537,12 @@
     margin-right: 2%;
     background: #f1c40f;
     padding: 4px 8px;
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.7;
-    color: transparent;
+    color: white;
     border-radius: 4px;
+    font-weight: 900;
+    font-family: 'Open Sans';
 }
 .threedee-printer {
     width: 179px;
@@ -542,7 +561,7 @@
 .process-elements-mock-modeling .element.element-3,
 .process-elements-mock-modeling .element.element-6,
 .process-elements-mock-modeling .element.element-9 {
-background:#3498db    
+background:#3498db
 }
 .process-elements-mock-modeling .element.element-10 { background: #beced6; }
 
@@ -551,7 +570,7 @@ background:#3498db
     fill: #2ecc71;
 }
 .threedee-printer path#fourthel {
-fill:#3498db    
+fill:#3498db
 }
 .threedee-printer path#thirdel {
 fill:#8e44ad
@@ -616,7 +635,7 @@ fill:#c0392b;
 </h4>
 <div class="process-elements-mock-modeling">
 <div class="threedee-printer">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1200 1500" enable-background="new 0 0 1200 1200" xml:space="preserve"><g>
+<svg style="display:none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1200 1500" enable-background="new 0 0 1200 1200" xml:space="preserve"><g>
 <path id="fifthel" d="M725.3,723.2H474.7c-8.3,0-15,6.7-15,15s6.7,15,15,15h250.5c8.3,0,15-6.7,15-15S733.5,723.2,725.3,723.2z"/>
 <path id="fourthel" d="M484.9,698.6c0,8.3,6.7,15,15,15h200.1c8.3,0,15-6.7,15-15s-6.7-15-15-15H499.9C491.7,683.6,484.9,690.3,484.9,698.6z"/>
 <path id="thirdel" d="M506.5,659c0,8.3,6.7,15,15,15h156.9c8.3,0,15-6.7,15-15s-6.7-15-15-15H521.5C513.3,644,506.5,650.7,506.5,659z"/>
@@ -625,7 +644,7 @@ fill:#c0392b;
 <path id="corpus" d="M952.6,97.5H247.4c-23,0-41.8,18.8-41.8,41.8v921.4c0,23,18.8,41.8,41.8,41.8h705.3c23,0,41.8-18.8,41.8-41.8V139.3   C994.4,116.3,975.7,97.5,952.6,97.5z M274.4,137.8c5.5-5.6,15.6-5.6,21.1,0c2.9,2.8,4.4,6.6,4.4,10.6c0,4-1.6,7.8-4.4,10.6   c-2.8,2.8-6.7,4.4-10.6,4.4c-4,0-7.8-1.6-10.6-4.4c-2.8-2.8-4.4-6.7-4.4-10.6C270,144.4,271.6,140.5,274.4,137.8z M827.1,945.9   c0,14-11.4,25.5-25.5,25.5h-23.6c-14,0-25.5-11.4-25.5-25.5v-12.4c0-14,11.4-25.5,25.5-25.5h23.6c14,0,25.5,11.4,25.5,25.5V945.9z    M305,854.6V803h590v51.6H305z M964.4,945.9c0,14-11.4,25.5-25.5,25.5h-88.1c4-7.6,6.2-16.3,6.2-25.5v-12.4   c0-9.2-2.3-17.8-6.2-25.5H939c14,0,25.5,11.4,25.5,25.5V945.9z M964.4,829.1c0,14-11.4,25.5-25.5,25.5h-14v-55.7   c0-14.3-11.6-25.9-25.9-25.9H300.9c-14.3,0-25.9,11.6-25.9,25.9v55.7h-14c-14,0-25.5-11.4-25.5-25.5V220.9   c0-14,11.4-25.5,25.5-25.5h678c14,0,25.5,11.4,25.5,25.5V829.1z"/>
 <path id="line" d="M935.8,283.4H560.2v-25.6c0-8.9-7.2-16.1-16.1-16.1h-85.9c-8.9,0-16.1,7.2-16.1,16.1v25.6H264.2c-8.3,0-15,6.7-15,15   s6.7,15,15,15h177.9v25.6c0,8.9,7.2,16.1,16.1,16.1l4.7,0l27.2,53.5c2.1,4.2,6.4,6.8,11,6.8s8.9-2.6,11-6.8l27.2-53.5l4.7,0   c0,0,0,0,0,0c8.9,0,16.1-7.2,16.1-16.1v-25.6h375.6c8.3,0,15-6.7,15-15S944.1,283.4,935.8,283.4z M501.1,397.1L479.7,355l21.4,0   l21.4,0L501.1,397.1z"/></g></svg></div>
 
-    <div class="element element-1">Element</div> 
+    <div class="element element-1">Element</div>
     <div class="element element-2">Element</div>
     <div class="element element-3">Element</div>
     <div class="element element-4">Element</div>
@@ -635,12 +654,12 @@ fill:#c0392b;
     <div class="element element-8">Element</div>
     <div class="element element-9">Element</div>
     <div class="element element-9">Element</div>
-    <div class="element element-10">Element</div>   
+    <div class="element element-10">Element</div>
 </div>
 </div>
 
 
-  <div class="container" style="padding-top: 112px;">
+  <div class="container">
     <div class="row text-center">
         <div id=cbp-so-scroller class="cbp-so-scroller use-cases-section">
             <style>
@@ -652,7 +671,7 @@ fill:#c0392b;
             </style>
             <section class=cbp-so-section>
                 <figure class="cbp-so-side cbp-so-side-left">
-                    <div class="fs1 icon-pencil" aria-hidden=true></div>
+                    <div class="fs1 icon-create-new-elem" aria-hidden=true></div>
                 </figure>
                 <article class="cbp-so-side cbp-so-side-right">
                     <h2>Describe</h2>
@@ -700,7 +719,7 @@ fill:#c0392b;
 </div>
 
   <div class="container">
-   
+
         <div id=cbp-so-scroller class="cbp-so-scroller use-cases-section">
             <style>
                 .fs1.icon-pencil,
@@ -736,7 +755,7 @@ fill:#c0392b;
                     <h2>Compare</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis neque illo similique, non numquam ad quis, voluptates voluptatem eligendi nobis repellat suscipit molestiae illum quam aspernatur doloremque beatae minima!</p>
                 </article>
-            </section>   
+            </section>
 
             <section class=cbp-so-section>
                 <figure class="cbp-so-side cbp-so-side-left">
@@ -746,7 +765,7 @@ fill:#c0392b;
                     <h2>Timer as delayed workflow execution</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis neque illo similique, non numquam ad quis, voluptates voluptatem eligendi nobis repellat suscipit molestiae illum quam aspernatur doloremque beatae minima!</p>
                 </article>
-            </section>   
+            </section>
 
 
         </div>
@@ -1164,7 +1183,7 @@ setTimeout(function() {
 
 
 
-</script> </body> </html> <script src="/javascripts/jquery-1.10.2.min.js"></script> <script src="/javascripts/jquery.parallax.min.js"></script> <script src="/javascripts/jquery.scrollTo-1.4.3.1-min.js"></script> <script src="/javascripts/jquery.svg.js"></script> <script src="/javascripts/jquery.svganim.js"></script> <script src="/javascripts/jquery.backgroundvideo.min.js"></script> <script src="/javascripts/cbpScroller.js"></script> <script src="/javascripts/modernizr.custom.js"></script> <script src="/javascripts/classie.js"></script> <script src="/javascripts/vide.js"></script> <script src="/javascripts/all.js"></script> <script src="/javascripts/easing.min.js"></script> <script src="/javascripts/page-transitions.js"></script> <script src="/javascripts/startup-kit.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js"></script> 
+</script> </body> </html> <script src="/javascripts/jquery-1.10.2.min.js"></script> <script src="/javascripts/jquery.parallax.min.js"></script> <script src="/javascripts/jquery.scrollTo-1.4.3.1-min.js"></script> <script src="/javascripts/jquery.svg.js"></script> <script src="/javascripts/jquery.svganim.js"></script> <script src="/javascripts/jquery.backgroundvideo.min.js"></script> <script src="/javascripts/cbpScroller.js"></script> <script src="/javascripts/modernizr.custom.js"></script> <script src="/javascripts/classie.js"></script> <script src="/javascripts/vide.js"></script> <script src="/javascripts/all.js"></script> <script src="/javascripts/easing.min.js"></script> <script src="/javascripts/page-transitions.js"></script> <script src="/javascripts/startup-kit.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js"></script>
 
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KDS4XF"
@@ -2325,7 +2344,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: bold;
     color: #079493;
 }
-</style> 
+</style>
 
 
 <script src="/javascripts/script.js" type="text/javascript"></script>
@@ -2359,10 +2378,10 @@ $(".price-slider")
     });
 
  $('.ui-slider-label[data-value="95"]').text('>95');
-</script> 
+</script>
 
 
-</body> 
+</body>
 </html>
 
   </body>
