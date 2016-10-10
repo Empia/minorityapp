@@ -247,7 +247,7 @@
             }
 .god-secondary p:first-child {
     padding-top: 30px;
-}            
+}
 
 .god-secondary p:last-child {
     padding-bottom: 107px;
@@ -431,39 +431,7 @@ $(window).load(function() {
         ga('create', 'UA-13037685-3', 'auto');
         ga('send', 'pageview');
     </script>
-    <script>
-        (function(d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter30361492 = new Ya.Metrika({
-                        id: 30361492,
-                        clickmap: true,
-                        trackLinks: true,
-                        accurateTrackBounce: true,
-                        webvisor: true,
-                        trackHash: true
-                    });
-                } catch (e) {}
-            });
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function() {
-                    n.parentNode.insertBefore(s, n);
-                };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/watch.js";
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else {
-                f();
-            }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/30361492" style="position:absolute; left:-9999px;" alt="" />
-        </div>
-    </noscript>
+
     <script src="https://imulus.github.io/retinajs/assets/retina.js"></script>
     <script>
         $(document).ready(function($) {
@@ -1279,27 +1247,27 @@ $(window).load(function() {
 * Copyright (c) 2015 Simon Goellner <simey.me@gmail.com>; Licensed MIT */
         /* HORIZONTAL */
         /* increase bottom margin to fit the pips */
-        
+
         .ui-slider-horizontal.ui-slider-pips {
             margin-bottom: 1.4em;
         }
         /* default hide the labels and pips that arnt visible */
         /* we just use css to hide incase we want to show certain */
         /* labels/pips individually later */
-        
+
         .ui-slider-pips .ui-slider-label,
         .ui-slider-pips .ui-slider-pip-hide {
             display: none;
         }
         /* now we show any labels that we've set to show in the options */
-        
+
         .ui-slider-pips .ui-slider-pip-label .ui-slider-label {
             display: block;
         }
         /* PIP/LABEL WRAPPER */
         /* position each pip absolutely just below the default slider */
         /* and also prevent accidental selection */
-        
+
         .ui-slider-pips .ui-slider-pip {
             width: 2em;
             height: 1em;
@@ -1323,7 +1291,7 @@ $(window).load(function() {
             cursor: default;
         }
         /* little pip/line position & size */
-        
+
         .ui-slider-pips .ui-slider-line {
             background: #999;
             width: 1px;
@@ -1333,7 +1301,7 @@ $(window).load(function() {
         }
         /* the text label postion & size */
         /* it overflows so no need for width to be accurate */
-        
+
         .ui-slider-pips .ui-slider-label {
             position: absolute;
             top: 5px;
@@ -1342,20 +1310,20 @@ $(window).load(function() {
             width: 2em;
         }
         /* make it easy to see when we hover a label */
-        
+
         .ui-slider-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label {
             color: black;
             font-weight: bold;
         }
         /* VERTICAL */
         /* vertical slider needs right-margin, not bottom */
-        
+
         .ui-slider-vertical.ui-slider-pips {
             margin-bottom: 1em;
             margin-right: 2em;
         }
         /* align vertical pips left and to right of the slider */
-        
+
         .ui-slider-vertical.ui-slider-pips .ui-slider-pip {
             text-align: left;
             top: auto;
@@ -1364,7 +1332,7 @@ $(window).load(function() {
             margin-bottom: -0.5em;
         }
         /* vertical line/pip should be horizontal instead */
-        
+
         .ui-slider-vertical.ui-slider-pips .ui-slider-line {
             width: 3px;
             height: 1px;
@@ -1381,7 +1349,7 @@ $(window).load(function() {
         }
         /* FLOATING HORIZTONAL TOOLTIPS */
         /* remove the godawful looking focus outline on handle and float */
-        
+
         .ui-slider-float .ui-slider-handle:focus,
         .ui-slider-float .ui-slider-handle.ui-state-focus .ui-slider-tip-label,
         .ui-slider-float .ui-slider-handle:focus .ui-slider-tip,
@@ -1391,7 +1359,7 @@ $(window).load(function() {
         }
         /* style tooltips on handles and on labels */
         /* also has a nice transition */
-        
+
         .ui-slider-float .ui-slider-tip,
         .ui-slider-float .ui-slider-tip-label {
             position: absolute;
@@ -1421,7 +1389,7 @@ $(window).load(function() {
         }
         /* show the tooltip on hover or focus */
         /* also switch transition delay around */
-        
+
         .ui-slider-float .ui-slider-handle:hover .ui-slider-tip,
         .ui-slider-float .ui-slider-handle.ui-state-hover .ui-slider-tip,
         .ui-slider-float .ui-slider-handle:focus .ui-slider-tip,
@@ -1437,7 +1405,7 @@ $(window).load(function() {
             transition-delay: 200ms, 200ms, 0ms;
         }
         /* put label tooltips below slider */
-        
+
         .ui-slider-float .ui-slider-pip .ui-slider-tip-label {
             top: 42px;
         }
@@ -1446,7 +1414,7 @@ $(window).load(function() {
             font-weight: normal;
         }
         /* give the tooltip a css triangle arrow */
-        
+
         .ui-slider-float .ui-slider-tip:after,
         .ui-slider-float .ui-slider-pip .ui-slider-tip-label:after {
             content: " ";
@@ -1460,7 +1428,7 @@ $(window).load(function() {
             margin-left: -5px;
         }
         /* put a 1px border on the tooltip arrow to match tooltip border */
-        
+
         .ui-slider-float .ui-slider-tip:before,
         .ui-slider-float .ui-slider-pip .ui-slider-tip-label:before {
             content: " ";
@@ -1474,7 +1442,7 @@ $(window).load(function() {
             margin-left: -5px;
         }
         /* switch the arrow to top on labels */
-        
+
         .ui-slider-float .ui-slider-pip .ui-slider-tip-label:after {
             border: 5px solid rgba(255, 255, 255, 0);
             border-bottom-color: white;
@@ -1487,7 +1455,7 @@ $(window).load(function() {
         }
         /* FLOATING VERTICAL TOOLTIPS */
         /* tooltip floats to left of handle */
-        
+
         .ui-slider-vertical.ui-slider-float .ui-slider-tip,
         .ui-slider-vertical.ui-slider-float .ui-slider-tip-label {
             top: 50%;
@@ -1514,7 +1482,7 @@ $(window).load(function() {
             left: -50px;
         }
         /* put label tooltips to right of slider */
-        
+
         .ui-slider-vertical.ui-slider-float .ui-slider-pip .ui-slider-tip-label {
             left: 47px;
         }
@@ -1522,7 +1490,7 @@ $(window).load(function() {
             left: 37px;
         }
         /* give the tooltip a css triangle arrow */
-        
+
         .ui-slider-vertical.ui-slider-float .ui-slider-tip:after,
         .ui-slider-vertical.ui-slider-float .ui-slider-pip .ui-slider-tip-label:after {
             border: 5px solid rgba(255, 255, 255, 0);
@@ -1564,7 +1532,7 @@ $(window).load(function() {
         /* SELECTED STATES */
         /* Comment out this chuck of code if you don't want to have
         the new label colours shown */
-        
+
         .ui-slider-pips [class*=ui-slider-pip-initial] {
             font-weight: bold;
             color: #14CA82;
@@ -1622,5 +1590,6 @@ $(window).load(function() {
     </body>
 
 </html>
+
   </body>
 </html>
