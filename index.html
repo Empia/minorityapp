@@ -2326,6 +2326,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <script src="/javascripts/script.js" type="text/javascript"></script>
+
+<script>
+fetch('https://min.ority.us/whoami', {
+  method: "POST",
+  body: {},
+credentials: 'include'
+}).then(function(success, error) {
+  console.log('success', success);
+  if (success !== undefined && success.ok === true && success.url !== "https://min.ority.us/signIn") {
+    document.querySelector('a.btn.bg-nephritis').text = "To App"
+  }
+  console.log('error', error);
+
+})
+
+</script>
 <script>
 
 
